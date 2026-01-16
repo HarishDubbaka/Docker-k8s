@@ -143,7 +143,6 @@ Local Laptop 💻 → Cloud VM ☁️ → Managed Containers ⚡ → Online Play
    - Azure Container Instances / AWS Fargate / GCP Cloud Run  
    - Deploy containers without managing VM  
    - Fast, scalable, cloud-native
----
 
 4. **Online Playground 🌐**  
    - **Play with Docker (PWD):** [https://labs.play-with-docker.com/](https://labs.play-with-docker.com/)  
