@@ -78,7 +78,7 @@ Before containers, deploying applications was often challenging. A typical workf
 4. The build is promoted to the **testing environment**, and again works  
 5. But when promoted to **production**, it fails 💥
 
-This "it works on my machine" problem happens due to:
+**Why this happens:**
 
 - **Environment Misconfiguration:** subtle differences in config files across environments  
 - **Missing Dependencies:** libraries or packages exist in dev/test but not in production  
@@ -148,5 +148,32 @@ Local Laptop 💻 → Cloud VM ☁️ → Managed Containers ⚡ → Online Play
    - **Play with Docker (PWD):** [https://labs.play-with-docker.com/](https://labs.play-with-docker.com/)  
    - **Katacoda interactive tutorials:** [https://www.katacoda.com/courses/docker](https://www.katacoda.com/courses/docker)  
    - Practice instantly without installation
-  
+
 ---
+
+# 🐳 Docker: Ship it like a whale, run it anywhere! 📦
+
+## 🌉 From Dev to Prod — Docker bridges the gap! 🐳
+
+---
+
+## 🖼️ Docker Whale Infographic
+
+![Docker Whale Infographic](./A_digital_vector_2D_illustration_features_Docker's.png)
+
+*The whale carrying containers represents shipping your app across Dev, Test, and Prod environments.*  
+
+---
+
+## 🐳 Why Docker has a whale in its logo
+
+- The whale represents **shipping**—Docker is all about shipping apps in containers  
+- The **containers on the whale’s back** show how Docker packages all the code, libraries, and dependencies needed to run an application  
+- The whale imagery gives a **friendly and approachable feel**, showing Docker “carries the heavy load” of running apps anywhere
+
+---
+
+### Why it’s not a shark
+
+- Sharks are aggressive and scary, which isn’t Docker’s message  
+- A whale is **strong, steady, and supportive**, symbolizing **reliability and portability** of containerized apps 🐳
