@@ -38,3 +38,18 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ☸️ **Kubernetes** orchestrates and manages these containers for **scalability, reliability, and self-healing**.
 
+---
+
+##  Day 01 🚀 Introduction to Docker
+
+History & Benefits
+
+Containerization vs Virtualization
+
+Problems with traditional deployments
+
+Why the Docker whale logo
+
+Links to resources for learning and practicing
+
+---
