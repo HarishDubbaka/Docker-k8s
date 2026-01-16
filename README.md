@@ -1,6 +1,6 @@
 ## 👋 About Me
 
-Hi, I’m **Harish Dubbaka** 👨‍💻, an **SAP BASIS professional** building expertise in **DevOps and cloud-native technologies** ☁️.
+Hi, I’m **Harish Dubbaka** 👨‍💻, an **SAP BASIS professional** passionate about **learning DevOps and cloud-native technologies** ☁️.  
 I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system operations**, documenting my learning through hands-on practice 📘🛠️.
 
 ---
@@ -8,6 +8,7 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ## 🏆 Certifications & Licenses
 
 🎓 **Microsoft Certified: Azure Fundamentals**
+
 🎓 **Microsoft Certified: Azure for SAP Workloads Specialty**
 
 ---
@@ -15,6 +16,7 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ## 🛡️ Badges
 
 🟢 **Kyndryl Agile Explorer** – Agile Academy Knowledge Badge
+
 🟢 **Designing and Implementing Microsoft DevOps Solutions**
 
 ---
@@ -33,5 +35,6 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ## 🚀 Docker & Kubernetes
 
 🐳 **Docker** packages applications and their dependencies into portable containers.
+
 ☸️ **Kubernetes** orchestrates and manages these containers for **scalability, reliability, and self-healing**.
 
