@@ -159,7 +159,7 @@ Local Laptop 💻 → Cloud VM ☁️ → Managed Containers ⚡ → Online Play
 
 ## 🖼️ Docker Whale Infographic
 
-![Docker Whale Infographic](./A_digital_vector_2D_illustration_features_Docker's.png)
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/2bc88a391bf6d4578a3093a3ba2f4ff613edb3ed/Day01/ChatGPT%20Image%20Jan%2016%2C%202026%2C%2009_56_48%20AM.png)
 
 *The whale carrying containers represents shipping your app across Dev, Test, and Prod environments.*  
 
