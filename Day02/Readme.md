@@ -89,3 +89,62 @@ A Docker registry is a **repository for storing Docker images**.
 Registries make it easy to share, version, and deploy container images across environments.
 
 ---
+
+## ✅ Verify Docker Desktop Installation
+
+Docker Desktop is an all-in-one application used to build Docker images, run containers, and manage Docker environments.
+
+
+Before proceeding, make sure Docker Desktop is **installed and running** on your system.
+
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/2a40ff1c1827fd4923216fb3f519865feea0484e/Day02/ChatGPT%20Image%20Jan%2017%2C%202026%2C%2006_50_55%20AM.png)
+
+
+### 🔍 How to Verify Installation
+
+1. Open a terminal or command prompt.
+2. Run the following command:
+
+   ```bash
+   docker --version
+````
+
+If Docker is installed correctly, the version details will be displayed.
+
+💡 Ensure Docker Desktop is running (Docker 🐳 icon visible in the system tray).
+
+---
+
+## 🚀 Run Your First Docker Container
+
+Once Docker Desktop is installed and set up, you’re ready to run a container.
+
+### ▶️ Try It Out
+
+Follow the steps below to run a Docker container using the CLI.
+
+#### 1️⃣ Start a Container
+
+```bash
+docker run -d -p 8080:80 docker/welcome-to-docker
+```
+
+#### 2️⃣ Access the Frontend
+
+This container exposes the application on port **8080**.
+
+🌐 Open your browser and visit:
+
+```
+http://localhost:8080
+```
+
+You should now see the **Welcome to Docker** page running successfully 🎉
+
+---
+
+✅ Congratulations! You’ve successfully verified Docker Desktop and run your first Docker container.
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/2a40ff1c1827fd4923216fb3f519865feea0484e/Day02/ChatGPT%20Image%20Jan%2017%2C%202026%2C%2006_50_55%20AM.png)
+
+```
+
