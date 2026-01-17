@@ -2,7 +2,9 @@
 
 Docker architecture consists of several key components, each playing a vital role in the containerization process.
 
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/2a40ff1c1827fd4923216fb3f519865feea0484e/Day02/ChatGPT%20Image%20Jan%2017%2C%202026%2C%2006_50_55%20AM.png)
+![Docker Architecture](https://github.com/HarishDubbaka/Docker-k8s/blob/2a40ff1c1827fd4923216fb3f519865feea0484e/Day02/ChatGPT%20Image%20Jan%2017%2C%202026%2C%2006_50_55%20AM.png)
+
+---
 
 ### 🔹 Core Components
 
@@ -27,7 +29,7 @@ The following steps describe how Docker components communicate with each other:
 1. The **Docker CLI (Client)** issues a `docker build` command to the Docker Host.  
    The Docker daemon builds an image based on the instructions provided and stores it in a Docker registry (local or Docker Hub).
 
-2. The Docker daemon can either **create a new image** or **pull an existing image** from the Docker registry.
+2. The Docker daemon either **creates a new image** or **pulls an existing image** from the Docker registry.
 
 3. The Docker daemon then **creates an instance of the Docker image**.
 
@@ -39,7 +41,7 @@ This represents a simple and typical Docker workflow.
 
 ## ⚙️ Docker Engine
 
-Docker Engine is the **core component** of the Docker platform. It is open-source and enables containerization using a **client-server architecture**.
+Docker Engine is the **core component** of the Docker platform. It enables containerization using a **client-server architecture**.
 
 Docker Engine includes:
 
@@ -58,9 +60,9 @@ Docker Engine includes:
 
 A Docker image is a **template used to create containers**.
 
-- Images contain pre-installed software, libraries, and dependencies.
-- Images are portable and reusable.
-- You can use existing images from Docker Hub instead of building from scratch.
+- Contains pre-installed software, libraries, and dependencies  
+- Portable and reusable  
+- Can be pulled from Docker Hub instead of building from scratch  
 
 Docker images are created using **Dockerfiles**, which contain step-by-step instructions for building the image layer by layer.
 
@@ -70,21 +72,20 @@ Docker images are created using **Dockerfiles**, which contain step-by-step inst
 
 Docker containers are the **running instances of Docker images**.
 
-- One image can create multiple containers.
-- Containers are lightweight, isolated, and fast.
-- Containers package application code, dependencies, and binaries together.
+- One image can create multiple containers  
+- Lightweight, isolated, and fast  
+- Packages application code, dependencies, and binaries together  
 
-Docker containers are similar to cargo containers:
-you can build, ship, run, stop, modify, or remove them easily without affecting other containers.
+Like cargo containers, Docker containers can be built, shipped, run, stopped, modified, or removed independently.
 
 ---
 
 ## 🗂️ Docker Registry
 
-A Docker registry is a **repository for storing Docker images**.
+A Docker registry is a **repository used to store Docker images**.
 
 - **Public Registry:** Docker Hub  
-- **Private Registry:** Used by organizations to store proprietary images securely
+- **Private Registry:** Used by organizations to store proprietary images securely  
 
 Registries make it easy to share, version, and deploy container images across environments.
 
@@ -94,19 +95,19 @@ Registries make it easy to share, version, and deploy container images across en
 
 Docker Desktop is an all-in-one application used to build Docker images, run containers, and manage Docker environments.
 
-
 Before proceeding, make sure Docker Desktop is **installed and running** on your system.
 
-![Image Alt]([https://github.com/HarishDubbaka/Docker-k8s/blob/2a40ff1c1827fd4923216fb3f519865feea0484e/Day02/ChatGPT%20Image%20Jan%2017%2C%202026%2C%2006_50_55%20AM.png](https://github.com/HarishDubbaka/Docker-k8s/blob/21e3c93c74af1b46513b187d4d156d756d129d31/Day02/docker%20desktop.png)
+![Docker Desktop](https://github.com/HarishDubbaka/Docker-k8s/blob/21e3c93c74af1b46513b187d4d156d756d129d31/Day02/docker%20desktop.png)
 
+---
 
 ### 🔍 How to Verify Installation
 
 1. Open a terminal or command prompt.
 2. Run the following command:
 
-   ```bash
-   docker --version
+```bash
+docker --version
 ````
 
 If Docker is installed correctly, the version details will be displayed.
@@ -120,8 +121,6 @@ If Docker is installed correctly, the version details will be displayed.
 Once Docker Desktop is installed and set up, you’re ready to run a container.
 
 ### ▶️ Try It Out
-
-Follow the steps below to run a Docker container using the CLI.
 
 #### 1️⃣ Start a Container
 
@@ -144,7 +143,8 @@ You should now see the **Welcome to Docker** page running successfully 🎉
 ---
 
 ✅ Congratulations! You’ve successfully verified Docker Desktop and run your first Docker container.
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/5ef0ed0a037751fc2dc70e6b1fe43b6894d55893/Day02/first%20container.png)
 
-```
+![First Container](https://github.com/HarishDubbaka/Docker-k8s/blob/5ef0ed0a037751fc2dc70e6b1fe43b6894d55893/Day02/first%20container.png)
 
+
+---
