@@ -51,3 +51,12 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
+### Day 02 🚀 Docker Architecture
+
+- It's Components Client, Daemon, Images, Containers & Registry
+- Docker Workflow
+- Ran my first container and accessed it on localhost:8080
+- Links to resources for learning and practicing
+
+---
+
