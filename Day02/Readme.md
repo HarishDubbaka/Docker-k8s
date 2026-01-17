@@ -37,6 +37,8 @@ The following steps describe how Docker components communicate with each other:
 
 This represents a simple and typical Docker workflow.
 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/2c9e00a23e71cc8686ac66ae993e636c58b60432/Day02/ChatGPT%20Image%20Jan%2017%2C%202026%2C%2010_51_06%20AM.png)
+
 ---
 
 ## ⚙️ Docker Engine
