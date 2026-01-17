@@ -140,8 +140,6 @@ http://localhost:8080
 
 You should now see the **Welcome to Docker** page running successfully 🎉
 
----
-
 ✅ Congratulations! You’ve successfully verified Docker Desktop and run your first Docker container.
 
 ![First Container](https://github.com/HarishDubbaka/Docker-k8s/blob/5ef0ed0a037751fc2dc70e6b1fe43b6894d55893/Day02/first%20container.png)
