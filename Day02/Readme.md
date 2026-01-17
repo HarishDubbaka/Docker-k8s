@@ -144,7 +144,7 @@ You should now see the **Welcome to Docker** page running successfully 🎉
 ---
 
 ✅ Congratulations! You’ve successfully verified Docker Desktop and run your first Docker container.
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/2a40ff1c1827fd4923216fb3f519865feea0484e/Day02/ChatGPT%20Image%20Jan%2017%2C%202026%2C%2006_50_55%20AM.png)
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/5ef0ed0a037751fc2dc70e6b1fe43b6894d55893/Day02/first%20container.png)
 
 ```
 
