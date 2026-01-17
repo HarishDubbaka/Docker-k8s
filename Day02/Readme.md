@@ -97,7 +97,7 @@ Docker Desktop is an all-in-one application used to build Docker images, run con
 
 Before proceeding, make sure Docker Desktop is **installed and running** on your system.
 
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/2a40ff1c1827fd4923216fb3f519865feea0484e/Day02/ChatGPT%20Image%20Jan%2017%2C%202026%2C%2006_50_55%20AM.png)
+![Image Alt]([https://github.com/HarishDubbaka/Docker-k8s/blob/2a40ff1c1827fd4923216fb3f519865feea0484e/Day02/ChatGPT%20Image%20Jan%2017%2C%202026%2C%2006_50_55%20AM.png](https://github.com/HarishDubbaka/Docker-k8s/blob/21e3c93c74af1b46513b187d4d156d756d129d31/Day02/docker%20desktop.png)
 
 
 ### 🔍 How to Verify Installation
