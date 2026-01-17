@@ -2,7 +2,7 @@
 
 Docker architecture consists of several key components, each playing a vital role in the containerization process.
 
-
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/2a40ff1c1827fd4923216fb3f519865feea0484e/Day02/ChatGPT%20Image%20Jan%2017%2C%202026%2C%2006_50_55%20AM.png)
 
 ### 🔹 Core Components
 
