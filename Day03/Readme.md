@@ -235,6 +235,8 @@ docker ps
 
 You can also view and manage containers directly from **Docker Desktop**.
 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/2207aa13221374e4e80279d95d31e1839a7aff4e/Day03/todo.png)
+
 ---
 
 ## 🎯 Key Takeaways
@@ -266,5 +268,5 @@ Stay curious and keep learning 🚀🐳
 📘 **Reference Documentation**
 [https://docs.docker.com/](https://docs.docker.com/)
 
-```
+
 
