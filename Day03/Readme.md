@@ -254,19 +254,19 @@ You can also view and manage containers directly from **Docker Desktop**.
 
 ---
 
-## 📌 What’s Next?
+## 📚 Next Learning
 
-## 🚀 Container Learning Journey
+In the next phase of this journey, we will focus on **packaging and sharing applications using Docker images**.
 
-Welcome to our containerization journey! This guide outlines the next steps to level up your skills.
-
-1. **Package your application as a container image**  
-   - Write a `Dockerfile` that defines how your app should be built.  
-   - Use `docker build` to create the image locally.  
+### 1️⃣ Package Your App as a Container Image
+- Write a **Dockerfile** that defines how your application is built and run
+- Build the image locally using Docker
+- Tag the image properly for versioning and identification
 
    ```bash
-   docker build -t <your-username>/<image-name>:<tag> .
-
+docker build -t <your-username>/<image-name>:<tag> .
+   ---
+   
 Stay curious and keep learning 🚀🐳
 
 ---
@@ -274,5 +274,5 @@ Stay curious and keep learning 🚀🐳
 📘 **Reference Documentation**
 [https://docs.docker.com/](https://docs.docker.com/)
 
-
+---
 
