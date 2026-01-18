@@ -1,4 +1,4 @@
-# 🧑‍💻 Develop with Containers – Day 03
+# 🧑‍💻 Develop with Containers 
 
 Yesterday, we successfully ran our **first Docker container** 🎉  
 Today, we move one step further and begin **application development using containers**.
