@@ -262,10 +262,6 @@ In the next phase of this journey, we will focus on **packaging and sharing appl
 - Write a **Dockerfile** that defines how your application is built and run
 - Build the image locally using Docker
 - Tag the image properly for versioning and identification
-
----
-docker build -t <your-username>/<image-name>:<tag> .
----
    
 Stay curious and keep learning 🚀🐳
 
