@@ -61,6 +61,12 @@ One of the biggest advantages of developing with containers:
 
 This improves **productivity, confidence, and learning speed**.
 
+## 🐳 Why the Container Still Shows Old Code
+
+- Containers are immutable: once created, they run from the image snapshot.
+- If you change your source code locally, the running container won’t see it unless you rebuild the image.
+- Restarting the container (docker restart) only restarts the same image — it doesn’t rebuild with your new code.
+
 ---
 
 ## ✅ Prerequisites
