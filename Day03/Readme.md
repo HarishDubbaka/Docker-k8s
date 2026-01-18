@@ -256,7 +256,7 @@ You can also view and manage containers directly from **Docker Desktop**.
 
 ## 📌 What’s Next?
 
-# 🚀 Container Learning Journey
+## 🚀 Container Learning Journey
 
 Welcome to our containerization journey! This guide outlines the next steps to level up your skills.
 
