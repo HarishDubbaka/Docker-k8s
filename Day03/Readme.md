@@ -263,9 +263,9 @@ In the next phase of this journey, we will focus on **packaging and sharing appl
 - Build the image locally using Docker
 - Tag the image properly for versioning and identification
 
-   ```bash
+---
 docker build -t <your-username>/<image-name>:<tag> .
-   ---
+---
    
 Stay curious and keep learning 🚀🐳
 
