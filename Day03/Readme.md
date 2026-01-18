@@ -6,7 +6,7 @@ Today, we move one step further and begin **application development using contai
 The goal of this learning is **not just to run commands**, but to clearly understand:
 - **Why** we use them
 - **What happens behind the scenes**
-
+- Clarity always comes before complexity.
 ---
 
 ## 🎯 What You Will Learn Today
@@ -60,21 +60,6 @@ One of the biggest advantages of developing with containers:
 - Refresh the browser to see updates instantly
 
 This improves **productivity, confidence, and learning speed**.
-
----
-
-## 🧠 Learning Approach
-
-> ⚠️ **Important Note**
-
-- Every command used will be **clearly explained**
-- Focus is on:
-  - What the command does
-  - Why it is needed
-  - How it helps development
-- No blind copy-paste learning ❌
-
-Clarity always comes before complexity.
 
 ---
 
