@@ -60,3 +60,21 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
+### Day 03 🚀 Docker Architecture
+
+- It's Components Client, Daemon, Images, Containers & Registry
+- Docker Workflow
+- Ran my first container and accessed it on localhost:8080
+- Links to resources for learning and practicing
+
+---
+
+### Day 04 🚀 Docker Architecture
+
+- Immutable Layers
+- Union Filesystem
+- Writable Layer
+- Dockerfile & Push to Docker Hub
+
+---
+
