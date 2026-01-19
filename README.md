@@ -69,7 +69,7 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
-### Day 04 🚀 Docker Architecture
+### Day 04 🚀 Docker Image Layers and Dockerfile Basics
 
 - Immutable Layers
 - Union Filesystem
