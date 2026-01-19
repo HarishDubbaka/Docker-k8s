@@ -1,0 +1,266 @@
+# 🐳 Docker Image Layers and Dockerfile Basics
+
+This document explains **Docker image layers**, **immutability**, **union filesystems**, and how to **create and run a PHP application using Docker**, with clear ASCII diagrams for better understanding 📘
+
+---
+
+## 🔒 What does “immutable image layers” mean?
+
+**Immutable** means **unchangeable**.
+
+Once a container image layer is created, it **cannot be modified**.
+If changes are required, Docker creates a **new layer on top** instead of editing the existing one.
+
+### 📌 Image Layer Immutability Diagram
+
+```
+Layer 5: Application Code     (immutable)
+----------------------------------------
+Layer 4: Dependencies         (immutable)
+----------------------------------------
+Layer 3: requirements.txt     (immutable)
+----------------------------------------
+Layer 2: Runtime              (immutable)
+----------------------------------------
+Layer 1: Base OS              (immutable)
+```
+
+✅ Once created, a layer remains the same forever.
+
+---
+
+## 📦 What is inside an image layer?
+
+Each image layer contains **filesystem changes only**, such as:
+
+* ➕ Adding files
+* ✏️ Modifying files
+* ❌ Deleting files
+
+### 🧱 Example Image Layers
+
+1. Base OS and package manager (`apt`)
+2. Runtime (Python / PHP / Node)
+3. Dependency definition file (`requirements.txt`)
+4. Installed dependencies
+5. Application source code
+
+Each step creates **one new immutable layer**.
+
+---
+
+## 📝 Example Dockerfile and Layer Creation
+
+```dockerfile
+FROM ubuntu:22.04          # Layer 1
+
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip   # Layer 2
+
+COPY requirements.txt /app/requirements.txt  # Layer 3
+
+RUN pip3 install -r /app/requirements.txt    # Layer 4
+
+COPY . /app                                  # Layer 5
+```
+
+### 📌 Dockerfile to Image Layers Diagram
+
+```
+Dockerfile Instructions
+        |
+        v
++----------------------+
+| FROM ubuntu:22.04    |  -> Layer 1
++----------------------+
+| RUN install runtime  |  -> Layer 2
++----------------------+
+| COPY requirements    |  -> Layer 3
++----------------------+
+| RUN install deps     |  -> Layer 4
++----------------------+
+| COPY app source      |  -> Layer 5
++----------------------+
+```
+
+---
+
+## 🗂️ How do layers become a filesystem?
+
+Docker uses a **union filesystem** to stack layers together.
+
+### 📌 Union Filesystem Diagram
+
+```
+Merged Container Filesystem (/)
+================================
+Application Code
+--------------------------------
+Dependencies
+--------------------------------
+Runtime
+--------------------------------
+Base OS
+```
+
+👉 Although layers are stored separately on disk, the container sees **one unified filesystem**.
+
+---
+
+## ✍️ Writing files inside a container
+
+Image layers are **read-only**, so Docker adds a **writable layer** when a container starts.
+
+### 📌 Container Writable Layer Diagram
+
+```
+Writable Container Layer (runtime changes)
+========================================
+Image Layer: Application Code
+----------------------------------------
+Image Layer: Dependencies
+----------------------------------------
+Image Layer: Runtime
+----------------------------------------
+Image Layer: Base OS
+```
+
+* All file changes go into the writable layer
+* When the container is deleted:
+
+  * ❌ Writable layer is removed
+  * ✅ Image layers are reused
+
+---
+
+## 📄 Dockerfile Overview
+
+A **Dockerfile** is a text file containing instructions to build a Docker image.
+
+* 🧱 Each instruction creates a new layer
+* 📦 Layers stack to form the final image
+* 🔨 Images are built using `docker build`
+* ▶️ Containers are started using `docker run`
+
+---
+
+## 📋 Common Dockerfile Instructions
+
+| Instruction | Purpose                    |
+| ----------- | -------------------------- |
+| FROM        | Defines base image         |
+| RUN         | Executes commands          |
+| COPY        | Copies files               |
+| ADD         | Copies with extra features |
+| ENV         | Sets environment variables |
+| WORKDIR     | Sets working directory     |
+| EXPOSE      | Documents ports            |
+| CMD         | Default container command  |
+| ENTRYPOINT  | Main application           |
+
+---
+
+## 🚀 Creating and Running a Sample PHP Application
+
+### Step 1️⃣ Create a Dockerfile
+
+Create a file named **`Dockerfile`** (no extension):
+
+```dockerfile
+FROM php:8.0-apache
+
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy application source code
+COPY ./src/ .
+
+# Enable Apache rewrite module
+RUN a2enmod rewrite
+
+# Expose port 80
+EXPOSE 80
+
+# Start Apache server
+CMD ["apache2-foreground"]
+```
+
+---
+
+### 📂 Required Project Structure
+
+```
+project-folder/
+├── Dockerfile
+└── src/
+    └── index.php
+```
+
+---
+
+### 🧪 Sample `index.php`
+
+```php
+<?php
+echo "Hello World from Docker! 🚀";
+```
+
+---
+
+### 🔨 Build the Docker Image
+
+```bash
+docker build -t sample-php-app .
+```
+
+---
+
+### ▶️ Run the Docker Container
+
+```bash
+docker run -p 8000:80 sample-php-app
+```
+
+---
+
+### 🌐 Access the Application
+
+Open your browser and visit:
+
+```
+http://localhost:8000
+```
+
+---
+
+## 🧠 What This Dockerfile Does
+
+| Instruction | Description                  |
+| ----------- | ---------------------------- |
+| FROM        | Uses PHP + Apache base image |
+| WORKDIR     | Sets working directory       |
+| COPY        | Copies application files     |
+| RUN         | Enables Apache rewrite       |
+| EXPOSE      | Documents port 80            |
+| CMD         | Starts Apache server         |
+
+---
+
+## ✅ Summary
+
+* 🧩 Docker images are built from **immutable layers**
+* 🧱 Containers add a **writable layer**
+* 📁 Union filesystem merges layers
+* 📝 Dockerfile defines image creation
+* 🌍 Images run consistently in any environment
+
+---
+
+🎉 **Happy Dockering!** 🐳🚀
+
+If you want next, I can:
+
+* Add **Mermaid diagrams** (GitHub-rendered)
+* Create **interview / exam notes**
+* Add **Docker Compose**
+* Convert this into a **hands-on lab guide**
