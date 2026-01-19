@@ -60,12 +60,12 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
-### Day 03 🚀 Docker Architecture
+### Day 03 🚀 Develop with Containers
 
-- It's Components Client, Daemon, Images, Containers & Registry
-- Docker Workflow
-- Ran my first container and accessed it on localhost:8080
-- Links to resources for learning and practicing
+- Why Develop with Containers?
+- Traditional Development vs Develop with Containers
+- Container-Based Development (Docker)
+- Hands-On: Develop with Containers
 
 ---
 
