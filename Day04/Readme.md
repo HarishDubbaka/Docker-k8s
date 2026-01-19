@@ -6,24 +6,26 @@ This document explains **Docker image layers**, **immutability**, **union filesy
 
 ## 🔒 What does “immutable image layers” mean?
 
-**Immutable** means **unchangeable**.
+**Immutable** means **unchangeable**.  
 
-Once a container image layer is created, it **cannot be modified**.
+Once a container image layer is created, it **cannot be modified**.  
 If changes are required, Docker creates a **new layer on top** instead of editing the existing one.
 
 ### 📌 Image Layer Immutability Diagram
 
 ```
-Layer 5: Application Code     (immutable)
-----------------------------------------
-Layer 4: Dependencies         (immutable)
-----------------------------------------
-Layer 3: requirements.txt     (immutable)
-----------------------------------------
-Layer 2: Runtime              (immutable)
-----------------------------------------
+
+## Layer 5: Application Code     (immutable)
+
+## Layer 4: Dependencies         (immutable)
+
+## Layer 3: requirements.txt     (immutable)
+
+## Layer 2: Runtime              (immutable)
+
 Layer 1: Base OS              (immutable)
-```
+
+````
 
 ✅ Once created, a layer remains the same forever.
 
@@ -39,11 +41,11 @@ Each image layer contains **filesystem changes only**, such as:
 
 ### 🧱 Example Image Layers
 
-1. Base OS and package manager (`apt`)
-2. Runtime (Python / PHP / Node)
-3. Dependency definition file (`requirements.txt`)
-4. Installed dependencies
-5. Application source code
+1. Base OS and package manager (`apt`)  
+2. Runtime (Python / PHP / Node)  
+3. Dependency definition file (`requirements.txt`)  
+4. Installed dependencies  
+5. Application source code  
 
 Each step creates **one new immutable layer**.
 
@@ -62,7 +64,7 @@ COPY requirements.txt /app/requirements.txt  # Layer 3
 RUN pip3 install -r /app/requirements.txt    # Layer 4
 
 COPY . /app                                  # Layer 5
-```
+````
 
 ### 📌 Dockerfile to Image Layers Diagram
 
@@ -233,6 +235,79 @@ http://localhost:8000
 
 ---
 
+## 📤 Push Your Image to Docker Hub
+
+### 1️⃣ Create a Docker Hub Account
+
+Go to [Docker Hub](https://hub.docker.com/) and sign up.
+You’ll need a **username** (e.g., `yourusername`) for tagging images.
+
+---
+
+### 2️⃣ Login to Docker Hub
+
+```bash
+docker login
+```
+
+Enter your Docker Hub username and password.
+You should see:
+
+```
+Login Succeeded
+```
+
+---
+
+### 3️⃣ Tag the Image
+
+```bash
+docker tag sample-php-app yourusername/sample-php-app:latest
+```
+
+* `yourusername` → Docker Hub username
+* `sample-php-app` → repository name
+* `latest` → tag (optional)
+
+Verify with:
+
+```bash
+docker images
+```
+
+---
+
+### 4️⃣ Push the Image
+
+```bash
+docker push yourusername/sample-php-app:latest
+```
+
+Docker will upload all layers.
+Once done, the image is available on Docker Hub.
+
+---
+
+### 5️⃣ Verify and Pull
+
+On Docker Hub, check your repository.
+Anyone can pull the image with:
+
+```bash
+docker pull yourusername/sample-php-app:latest
+```
+
+---
+
+### ✅ Quick Summary
+
+1. `docker login` → Login to Docker Hub
+2. `docker tag <local-image> <username>/<repo>:<tag>` → Tag image
+3. `docker push <username>/<repo>:<tag>` → Push image
+4. Verify and share the image
+
+---
+
 ## 🧠 What This Dockerfile Does
 
 | Instruction | Description                  |
@@ -258,9 +333,5 @@ http://localhost:8000
 
 🎉 **Happy Dockering!** 🐳🚀
 
-If you want next, I can:
+```
 
-* Add **Mermaid diagrams** (GitHub-rendered)
-* Create **interview / exam notes**
-* Add **Docker Compose**
-* Convert this into a **hands-on lab guide**
