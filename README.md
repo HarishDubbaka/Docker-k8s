@@ -78,3 +78,18 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
+### Day 05 🚀 Mastering Multi-Stage Docker Builds for Reac
+
+- Introduction
+- Why Multi-Stage Builds?
+- Prerequisites
+- Step-by-Step Tutorial
+- How It Works: Deconstructing the Dockerfile
+- Inspecting the Final Container
+- What Happens if You Delete `index.html`
+- Restoring Deleted Files
+- Useful Docker Commands
+- Best Practices
+- Resources
+
+---
