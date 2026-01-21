@@ -141,20 +141,21 @@ docker ps
 ```
 
 ```
-0.0.0.0:54772->80/tcp
+0.0.0.0:59697->80/tcp
 ```
-![Image Alt](image_url). 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/8fc71e440699cf5bd634af665fbd9a55835f31f0/Day06/ephemeal%20port.png).
+
 Meaning:
 
 * App listens on **80** in the container
-* Docker exposed it on **54772** on your machine
+* Docker exposed it on **59697** on your machine
 
 Access it at:
 
 ```
-http://localhost:54772
+http://localhost:59697
 ```
-![Image Alt](image_url).
+![Image Alt]().
 ---
 
 ## 📢 Publishing All Exposed Ports
