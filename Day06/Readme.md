@@ -143,7 +143,7 @@ docker ps
 ```
 0.0.0.0:54772->80/tcp
 ```
-image need to add 
+![Image Alt](image_url). 
 Meaning:
 
 * App listens on **80** in the container
@@ -154,7 +154,7 @@ Access it at:
 ```
 http://localhost:54772
 ```
-ngin 
+![Image Alt](image_url).
 ---
 
 ## 📢 Publishing All Exposed Ports
