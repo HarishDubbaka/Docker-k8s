@@ -93,3 +93,14 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 - Resources
 
 ---
+
+### Day 05 — Docker Networking (Ports)
+
+- Container isolation basics
+- Publishing ports with -p
+- Ephemeral ports
+- EXPOSE vs -p vs -P
+- Security considerations
+➡️ Learn how traffic flows from browser → host → container
+
+---
