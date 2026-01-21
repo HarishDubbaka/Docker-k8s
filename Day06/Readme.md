@@ -143,7 +143,7 @@ docker ps
 ```
 0.0.0.0:59697->80/tcp
 ```
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/8fc71e440699cf5bd634af665fbd9a55835f31f0/Day06/ephemeal%20port.png).
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/8fc71e440699cf5bd634af665fbd9a55835f31f0/Day06/ephemeal%20port.png)
 
 Meaning:
 
@@ -155,7 +155,8 @@ Access it at:
 ```
 http://localhost:59697
 ```
-![Image Alt]().
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/95028c315307ac945c4b08904857d2b3dd5f1599/Day06/ngin.png)
+
 ---
 
 ## 📢 Publishing All Exposed Ports
