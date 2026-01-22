@@ -66,15 +66,69 @@ docker run -d -p HOST_PORT:CONTAINER_PORT image
 
 ### 🧠 Example (Postgres)
 
-```bash
-docker run -d -p 5432:5432 postgres   # First DB
-docker run -d -p 5433:5432 postgres   # Second DB
+## 🔹 Dockerfile (same for both DBs)
+```dockerfile
+FROM postgres:17
+
+# Default environment variables (can be overridden at runtime)
+ENV POSTGRES_USER=admin \
+    POSTGRES_PASSWORD=secret \
+    POSTGRES_DB=mydb
+
+EXPOSE 5432
+CMD ["postgres"]
 ```
+
+👉 This image always runs PostgreSQL on **port 5432 inside the container**.  
+
+---
+
+## 🔹 Running Two Independent Databases
+
+### First Database (on host port 5432)
+```bash
+docker run -d \
+  -p 5432:5432 \
+  --name db1 \
+  -e POSTGRES_USER=user1 \
+  -e POSTGRES_PASSWORD=pass1 \
+  -e POSTGRES_DB=db_one \
+  my-postgres
+```
+
+- Container name → `db1`  
+- Host port → `5432`  
+- Internal DB → `db_one` with user `user1`  
+
+---
+
+### Second Database (on host port 5433)
+```bash
+docker run -d \
+  -p 5433:5432 \
+  --name db2 \
+  -e POSTGRES_USER=user2 \
+  -e POSTGRES_PASSWORD=pass2 \
+  -e POSTGRES_DB=db_two \
+  my-postgres
+```
+
+- Container name → `db2`  
+- Host port → `5433`  
+- Internal DB → `db_two` with user `user2`  
+
+---
+
+## 🔹 How to Connect
+- First DB → `psql -h localhost -p 5432 -U user1 db_one`  
+- Second DB → `psql -h localhost -p 5433 -U user2 db_two`  
+
+---
 
 ### What’s happening?
 
-* Inside both containers → Postgres listens on **5432**
-* On your machine:
+✅ Both containers run the **same image** Postgres listens on **5432**, but each has its own **port mapping, user, password, and database**.  
+✅ They are **completely isolated** — two separate PostgreSQL servers on your machine.  
 
   * First DB → `localhost:5432`
   * Second DB → `localhost:5433`
