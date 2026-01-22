@@ -265,7 +265,6 @@ docker run -d \
 - `-p 5434:5432` → map host port **5434** → container port **5432**.  
 - `postgres` → official PostgreSQL image.  
 
----
 
 ![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/9eb269cd8311d00e13b8b49c3c1d0983167679cf/Day07/psotgress%20run%20and%20verify.png)
 
@@ -282,7 +281,8 @@ psql -h localhost -p 5434 -U postgres
 ```bash
 docker exec -it mydb psql -U postgres
 ```
-![Image Alt]()
+
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/918f527d8c3d539c7c684b84b2d0a43e1d7c5c35/Day07/postgress%20db%20connect.png)
 
 ## 🔒 Why Custom Networks Are Better
 - Containers can talk using **names** (e.g., `app → mydb`).  
@@ -355,11 +355,9 @@ You control:
 * 🌐 **Networks** → isolate & connect
 * ▶️ **CMD / ENTRYPOINT** → startup logic
 
-Once you master this, Docker stops feeling “magical” and starts feeling **predictable and powerful** 💪🐳
-
 ---
 
 👉 **Next step (natural progression):**
 Understanding **Volumes vs Bind Mounts** — how containers **keep data alive** 💾
 
-Say the word and I’ll break that down just as clearly.
+
