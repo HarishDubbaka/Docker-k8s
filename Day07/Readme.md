@@ -331,6 +331,25 @@ docker compose up -d
 
 ---
 
+🔹 Key Difference
+|  |  |  | 
+|  |  |  | 
+|  | docker run |  | 
+|  |  |  | 
+
+
+
+🔹 Why Use Both Together
+- ENTRYPOINT → defines the program (e.g., Postgres startup script).
+- CMD → defines the default arguments (e.g., postgres).
+- Together → flexible, predictable containers.
+
+🔹 In Practice
+- docker run postgres docker-entrypoint.sh -h localhost -p 5432
+→ Overrides CMD, tells Docker to run entrypoint script with custom args.
+
+---
+
 ## 🔐 7. Default Network vs Custom Network (One Look)
 
 | Feature         | Default Bridge | Custom Network |
