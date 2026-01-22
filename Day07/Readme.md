@@ -243,6 +243,8 @@ docker network ls   # verify it exists
 - `mynetwork` is a private Docker network.
 - Only containers attached to it can communicate with each other.
 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/3fe19518a7941b6b62e8012ccd19eba231f0b444/Day07/network%20docker.png)
+
 ---
 
 ## 🚀 Run PostgreSQL on the Custom Network
@@ -264,6 +266,7 @@ docker run -d \
 - `postgres` → official PostgreSQL image.  
 
 ---
+![Image Alt]()
 
 ## 🔗 Connect to the Database
 
@@ -276,7 +279,7 @@ psql -h localhost -p 5434 -U postgres
 ```bash
 docker exec -it mydb psql -U postgres
 ```
----
+![Image Alt]()
 
 ## 🔒 Why Custom Networks Are Better
 - Containers can talk using **names** (e.g., `app → mydb`).  
