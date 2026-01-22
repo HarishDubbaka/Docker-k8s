@@ -223,11 +223,13 @@ docker stats
 
 ### Default Bridge Network
 
-* All containers join it automatically
-* Containers:
-
-  * ❌ Can’t resolve each other by name
-  * ⚠️ Less isolation
+- When you install Docker, it creates a default bridge network.
+- Every container you run automatically joins this network unless you specify otherwise.
+- Problems with default bridge:
+- ❌ Containers cannot resolve each other by name (you’d need IP addresses).
+- ⚠️ Less isolation — all containers are lumped together.
+  
+Think of it like a shared public WiFi: everyone is connected, but you need IPs to talk, and it’s messy.
 
 ---
 
