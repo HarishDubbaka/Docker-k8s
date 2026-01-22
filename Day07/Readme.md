@@ -266,7 +266,10 @@ docker run -d \
 - `postgres` → official PostgreSQL image.  
 
 ---
-![Image Alt]()
+
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/9eb269cd8311d00e13b8b49c3c1d0983167679cf/Day07/psotgress%20run%20and%20verify.png)
+
+---
 
 ## 🔗 Connect to the Database
 
