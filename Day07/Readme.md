@@ -233,39 +233,55 @@ Think of it like a shared public WiFi: everyone is connected, but you need IPs t
 
 ---
 
-### ✅ Custom Network (Best Practice)
-
-Create your own network:
+## ✅ Create a Custom Network
 
 ```bash
 docker network create mynetwork
+docker network ls   # verify it exists
 ```
 
-Run container on it:
+- `mynetwork` is a private Docker network.
+- Only containers attached to it can communicate with each other.
+
+---
+
+## 🚀 Run PostgreSQL on the Custom Network
 
 ```bash
 docker run -d \
   --network mynetwork \
+  --name mydb \
   -e POSTGRES_PASSWORD=secret \
   -p 5434:5432 \
   postgres
 ```
 
-### Why this is better:
-
-* Containers can talk using **names**
-* Better isolation 🔐
-* Cleaner architecture
-
-🧠 Example:
-
-```text
-app → postgres
-```
-
-(No IP addresses needed!)
+### Explanation:
+- `--network mynetwork` → attach container to the custom network.  
+- `--name mydb` → container name (used for DNS resolution).  
+- `-e POSTGRES_PASSWORD=secret` → sets password for the `postgres` user.  
+- `-p 5434:5432` → map host port **5434** → container port **5432**.  
+- `postgres` → official PostgreSQL image.  
 
 ---
+
+## 🔗 Connect to the Database
+
+### Option 1: From Host (requires `psql` installed)
+```bash
+psql -h localhost -p 5434 -U postgres
+```
+
+### Option 2: From Inside the Container
+```bash
+docker exec -it mydb psql -U postgres
+```
+---
+
+## 🔒 Why Custom Networks Are Better
+- Containers can talk using **names** (e.g., `app → mydb`).  
+- Provides **better isolation** — only containers on the same network can see each other.  
+- Results in a **cleaner architecture** for multi‑service apps.
 
 ## ▶️ 6. Overriding CMD and ENTRYPOINT
 
