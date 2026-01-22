@@ -15,8 +15,8 @@ Every Docker image defines:
 * **Which ports the app listens on**
 * **Default environment settings**
 
-* Docker File
-
+Docker File
+```bash
 FROM debian:bullseye-slim
 
 ENV PGDATA=/var/lib/postgresql/data
@@ -26,7 +26,7 @@ USER postgres
 WORKDIR /var/lib/postgresql
 
 CMD ["postgres"]
-
+```
 
 📌 If you run:
 
@@ -35,7 +35,9 @@ docker run postgres
 ```
 
 ✅ Starts program → postgres
+
 ✅ Listens on port → 5432
+
 ✅ Default env → PGDATA for database storage
 
 Docker says:
