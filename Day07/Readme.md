@@ -331,12 +331,9 @@ docker compose up -d
 
 ---
 
-🔹 Key Difference
-|  |  |  | 
-|  |  |  | 
-|  | docker run |  | 
-|  |  |  | 
+🔑 Key Difference
 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/491b770aa0453a15585ec33f44763222d6a5ecdd/Day07/difference%20cmd%20.png)
 
 
 🔹 Why Use Both Together
