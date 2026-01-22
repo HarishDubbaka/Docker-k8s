@@ -94,7 +94,7 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
-### Day 05 — Docker Networking (Ports)
+### Day 06 — Docker Networking (Ports)
 
 - Container isolation basics
 - Publishing ports with -p
