@@ -15,6 +15,7 @@ Every Docker image defines:
 * **Which ports the app listens on**
 * **Default environment settings**
 
+
 📌 If you run:
 
 ```bash
