@@ -203,6 +203,7 @@ Example: Create a volume named `Harish-data`
 ```bash
 docker volume create Harish-data
 ```
+![Image Alt]().
 
 📍 Docker stores volumes inside Linux paths like:
 
@@ -224,7 +225,7 @@ Use Docker CLI instead:
 docker volume ls
 docker volume inspect <volume_name>
 ```
-![Image Alt](image_url).
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/c61b368e9623db6175deedf19b5d95bdc7a0009c/Day08/docker%20inspect%20.png).
 This shows:
 
 * Where the volume is stored
