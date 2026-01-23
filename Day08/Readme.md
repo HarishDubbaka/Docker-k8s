@@ -225,7 +225,7 @@ Use Docker CLI instead:
 docker volume ls
 docker volume inspect <volume_name>
 ```
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/c61b368e9623db6175deedf19b5d95bdc7a0009c/Day08/docker%20inspect%20.png).
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/c61b368e9623db6175deedf19b5d95bdc7a0009c/Day08/docker%20inspect%20.png)
 This shows:
 
 * Where the volume is stored
@@ -241,7 +241,7 @@ docker run -dp 3000:3000 \
 --name dockervolumepresistant-todo \
 dockervolume-todo
 ```
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/26362087bdb5ecd3dee81df4d8ea174a93943194/Day08/docker%20volume%20use%201st%20contiaer.png). 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/26362087bdb5ecd3dee81df4d8ea174a93943194/Day08/docker%20volume%20use%201st%20contiaer.png)
 
 - Stopped the container with ID 40f94b6a8f81
 - Removed it from your system
@@ -249,7 +249,7 @@ This ensures that:
 - Port 3000 (or any other it was using) is now free
 
 
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/6042091cfd983e87297d9bbdd60a0abe6431f228/Day08/dockerpersistant%20.png).
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/6042091cfd983e87297d9bbdd60a0abe6431f228/Day08/dockerpersistant%20.png)
 
 ---
 
@@ -268,17 +268,3 @@ This ensures that:
 
 ---
 
-## 📸 Example Screenshot
-
-👉 *(Add example screenshot here)*
-
----
-
-If you want, I can:
-
-* ✨ Add **more emojis**
-* 🧹 Fix grammar without changing meaning
-* 📘 Convert this into **Day05 Docker Notes**
-* 🖼️ Add **diagram images**
-
-Just say the word 😄
