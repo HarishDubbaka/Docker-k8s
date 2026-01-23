@@ -127,7 +127,8 @@ docker exec -it <container_id> sh
 
 Inside the container, we created a directory and some files 📂.
 
-![Image Alt](image_url). 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/06d27857bc6a0bd050bcbbf51a8fa5b0e6176fdf/Day08/docker%20volume%20use%201st%20contiaer.png).
+
 ---
 
 ## ❗ Problem: Data Loss
