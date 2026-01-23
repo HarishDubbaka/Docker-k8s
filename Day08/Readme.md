@@ -268,3 +268,4 @@ This ensures that:
 
 ---
 
+“Containers are like memory-loss patients 🧠❌🐳 — give them a volume 📦💾 and they remember everything.”
