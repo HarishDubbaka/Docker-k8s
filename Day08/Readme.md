@@ -241,7 +241,7 @@ docker run -dp 3000:3000 \
 --name dockervolumepresistant-todo \
 dockervolume-todo
 ```
-![Image Alt](image_url). 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/26362087bdb5ecd3dee81df4d8ea174a93943194/Day08/docker%20volume%20use%201st%20contiaer.png). 
 
 ![Image Alt](image_url).
 
