@@ -203,7 +203,7 @@ Example: Create a volume named `Harish-data`
 ```bash
 docker volume create Harish-data
 ```
-![Image Alt]().
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/004cd0f4a38ac939211ec432570201e3b3ff09ae/Day08/docker%20volume%20creates.png).
 
 📍 Docker stores volumes inside Linux paths like:
 
