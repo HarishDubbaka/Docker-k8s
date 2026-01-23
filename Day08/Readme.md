@@ -249,7 +249,7 @@ This ensures that:
 - Port 3000 (or any other it was using) is now free
 
 
-![Image Alt](image_url).
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/6042091cfd983e87297d9bbdd60a0abe6431f228/Day08/dockerpersistant%20.png).
 
 ---
 
