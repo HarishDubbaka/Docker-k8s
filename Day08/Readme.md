@@ -127,6 +127,7 @@ docker exec -it <container_id> sh
 
 Inside the container, we created a directory and some files 📂.
 
+![Image Alt](image_url). 
 ---
 
 ## ❗ Problem: Data Loss
@@ -222,7 +223,7 @@ Use Docker CLI instead:
 docker volume ls
 docker volume inspect <volume_name>
 ```
-
+![Image Alt](image_url).
 This shows:
 
 * Where the volume is stored
@@ -238,6 +239,9 @@ docker run -dp 3000:3000 \
 --name dockervolumepresistant-todo \
 dockervolume-todo
 ```
+![Image Alt](image_url). 
+
+![Image Alt](image_url).
 
 ---
 
