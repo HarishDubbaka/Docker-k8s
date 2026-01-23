@@ -243,6 +243,12 @@ dockervolume-todo
 ```
 ![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/26362087bdb5ecd3dee81df4d8ea174a93943194/Day08/docker%20volume%20use%201st%20contiaer.png). 
 
+- Stopped the container with ID 40f94b6a8f81
+- Removed it from your system
+This ensures that:
+- Port 3000 (or any other it was using) is now free
+
+
 ![Image Alt](image_url).
 
 ---
