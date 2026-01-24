@@ -104,3 +104,26 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ➡️ Learn how traffic flows from browser → host → container
 
 ---
+
+### Day 07 — Overriding Container Defaults in Docker (Crystal Clear)
+
+- Intro – Images = defaults, containers = runtime
+- Ports – Avoid conflicts with -p HOST:CONTAINER
+- Env Vars – Pass configs at runtime / .env
+- Resources – Limit CPU & memory
+- Networking – Default vs custom networks
+- CMD & ENTRYPOINT – Override container start
+- Takeaway – Full control over ports, env, resources, network
+
+---
+
+### Day 08 — 
+
+- Intro – Images = defaults, containers = runtime
+- Ports – Avoid conflicts with -p HOST:CONTAINER
+- Env Vars – Pass configs at runtime / .env
+- Resources – Limit CPU & memory
+- Networking – Default vs custom networks
+- CMD & ENTRYPOINT – Override container start
+- Takeaway – Full control over ports, env, resources, network
+---
