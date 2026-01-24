@@ -117,13 +117,30 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
-### Day 08 — 
+### Day 08 — Persisting Container Data in Docker
 
-- Intro – Images = defaults, containers = runtime
-- Ports – Avoid conflicts with -p HOST:CONTAINER
-- Env Vars – Pass configs at runtime / .env
-- Resources – Limit CPU & memory
-- Networking – Default vs custom networks
-- CMD & ENTRYPOINT – Override container start
-- Takeaway – Full control over ports, env, resources, network
+- Why – Containers forget data ❌
+- Layers Recap – Writable layer stores runtime changes
+- Problem – Data lost on container removal
+- Solution – Use Docker Volumes 📦
+- Create Volume – docker volume create <name>
+- Inspect Volume – docker volume ls / inspect 🔍
+- Run with Volume – docker run -v <volume>:<path>
+- Flags Explained – -d, -p, -v, --name
+- Takeaway – Volumes = container memory 🧠💾
+
+---
+
+### Day 09 — 
+
+- Why – Containers forget data ❌
+- Layers Recap – Writable layer stores runtime changes
+- Problem – Data lost on container removal
+- Solution – Use Docker Volumes 📦
+- Create Volume – docker volume create <name>
+- Inspect Volume – docker volume ls / inspect 🔍
+- Run with Volume – docker run -v <volume>:<path>
+- Flags Explained – -d, -p, -v, --name
+- Takeaway – Volumes = container memory 🧠💾
+
 ---
