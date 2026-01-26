@@ -38,6 +38,11 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ☸️ **Kubernetes** orchestrates and manages these containers for **scalability, reliability, and self-healing**.
 
+Here’s a polished **README.md** version of your Docker learning journey and automation notes, formatted cleanly for GitHub:
+
+```markdown
+# 🐳 Docker Learning Journey & Automation Guide
+
 ---
 
 ### Day 01 🚀 Introduction to Docker
@@ -53,7 +58,7 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ### Day 02 🏗️ Docker Architecture
 - 🧩 Components: Client, Daemon, Images, Containers & Registry  
 - 🔄 Docker Workflow  
-- 🖥️ Ran my first container and accessed it on localhost:8080  
+- 🖥️ Ran my first container and accessed it on `localhost:8080`  
 - 🔗 Links to resources for learning and practicing  
 
 ---
@@ -135,25 +140,21 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
-Got it 👍 — let’s merge your **Docker Cheatsheet (Day 10)** with the **GitHub Actions Automation (Day 11)** into one concise index page.  
+### Day 10 🐳 Docker Cheatsheet – Quick Reference
 
----
-
-# 🐳 Docker Cheatsheet – Quick Reference  
-
-### 🔹 Docker Basics  
+#### 🔹 Docker Basics
 - 🖥️ `docker --version` → Check version  
 - 📊 `docker info` → System info  
 - 🔑 `docker login` / `docker logout` → Docker Hub access  
 
-### 🔹 Images  
+#### 🔹 Images
 - 🗂️ `docker images` → List images  
 - 📥 `docker pull <image>` → Download image  
 - 🏗️ `docker build -t <name>:<tag> .` → Build image  
 - 🗑️ `docker rmi <image>` → Remove image  
 - 🏷️ `docker tag <image> <repo>:<tag>` → Tag image  
 
-### 🔹 Containers  
+#### 🔹 Containers
 - 📦 `docker ps` → Running containers  
 - 📦 `docker ps -a` → All containers  
 - ▶️ `docker run <image>` → Run container  
@@ -161,57 +162,54 @@ Got it 👍 — let’s merge your **Docker Cheatsheet (Day 10)** with the **Git
 - ⏯️ `docker start/stop <container>` → Start/Stop  
 - 🗑️ `docker rm <container>` → Remove container  
 
-### 🔹 Logs & Access  
+#### 🔹 Logs & Access
 - 📜 `docker logs <container>` → View logs  
 - 🖱️ `docker exec -it <container> /bin/bash` → Open shell  
 
-### 🔹 Cleanup  
+#### 🔹 Cleanup
 - 🧹 `docker system prune` → Remove unused resources  
 - 🧹 `docker system prune -a` → Aggressive cleanup  
 
-💡 **Tip:** Keep practicing daily — consistency beats perfection! 💪  
-
 ---
 
-# 🐳 Day 11 – Automating Docker Builds with GitHub Actions  
+### Day 11 🐳 Automating Docker Builds with GitHub Actions
 
-### 📖 Introduction  
+#### 📖 Introduction
 Why automate Docker builds? → Manual build/tag/push is repetitive.  
 
-### ❌ Problem  
+#### ❌ Problem
 - Slow, error-prone, repetitive manual steps.  
 
-### 🤖 Solution  
+#### 🤖 Solution
 - GitHub Actions automates build, tag, and push.  
 
-### 🛠️ Prerequisites  
+#### 🛠️ Prerequisites
 - Docker Hub account  
 - Dockerfile ready  
 - Credentials (`DOCKER_USERNAME`, `DOCKER_PASSWORD`)  
 
-### 🔑 Setup  
-- Add secrets in GitHub → `DOCKER_USERNAME` (your Docker Hub username, e.g., `970371`) and `DOCKER_PASSWORD` (Docker Hub token).  
+#### 🔑 Setup
+- Add secrets in GitHub →  
+  - `DOCKER_USERNAME` (your Docker Hub username, e.g., `970371`)  
+  - `DOCKER_PASSWORD` (Docker Hub token).  
 
-### 📂 Workflow File  
+#### 📂 Workflow File
 - Create `.github/workflows/docker-ci.yml`  
 
-### 🪜 Workflow Steps  
+#### 🪜 Workflow Steps
 1. 📥 Checkout code  
 2. 🏷️ Extract metadata (tags, annotations)  
 3. 🔑 Log in to Docker Hub  
 4. ⚙️ Set up Docker Buildx  
 5. 🏗️ Build & push image  
 
-### ✅ Result  
+#### ✅ Result
 - Every commit to `main` → Auto-build & push to Docker Hub.  
 
-### 🚀 Benefits  
+#### 🚀 Benefits
 - Saves time  
 - Reduces errors  
 - Improves collaboration  
-
-### 🔮 Next Steps  
-- Extend automation → tests, multi-platform builds, Azure Pipelines  
 
 ---
 
