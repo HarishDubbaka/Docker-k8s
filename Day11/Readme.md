@@ -167,3 +167,7 @@ jobs:
 I changed the image name in my workflow, and GitHub Actions automatically built and pushed the updated image. I confirmed the new image is available in Docker Hub, so everything is working smoothly.
 
 ![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/45403930484208608e2b9171e9d39e69348872ba/Day11/dockerhub1.png)
+
+---
+
+After mastering Docker automation with GitHub Actions, it’s time to level up with Azure Pipelines!
