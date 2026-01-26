@@ -1,4 +1,4 @@
-# Automating Docker Builds with GitHub Actions – Plain Language Guide
+# Automating Docker Builds with GitHub Actions 
 
 ---
 
