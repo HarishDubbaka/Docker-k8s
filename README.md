@@ -38,11 +38,6 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ☸️ **Kubernetes** orchestrates and manages these containers for **scalability, reliability, and self-healing**.
 
-Here’s a polished **README.md** version of your Docker learning journey and automation notes, formatted cleanly for GitHub:
-
-```markdown
-# 🐳 Docker Learning Journey & Automation Guide
-
 ---
 
 ### Day 01 🚀 Introduction to Docker
