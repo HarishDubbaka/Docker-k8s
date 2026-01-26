@@ -164,3 +164,6 @@ jobs:
 > **Imagine:** You push a code change → GitHub Actions builds the Docker image → pushes it to Docker Hub → you get a new working image automatically.
 
 ---
+I changed the image name in my workflow, and GitHub Actions automatically built and pushed the updated image. I confirmed the new image is available in Docker Hub, so everything is working smoothly.
+
+![Image Alt]().
