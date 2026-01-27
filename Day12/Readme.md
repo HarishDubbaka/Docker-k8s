@@ -246,6 +246,7 @@ No worries 😊
 Just to inform you:
 
 🐳 `970371/my-image` → built using **Azure DevOps Pipeline**
+
 🐳 `970371/my-image1` → built using **GitHub Actions**
 
 ---
