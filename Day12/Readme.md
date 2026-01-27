@@ -3,6 +3,8 @@
 This document explains how to use **Azure Pipelines** to **build and push Docker images to Docker Hub** automatically.  
 It helps you create a **secure CI workflow** for containerized applications using Azure DevOps.
 
+Just to inform you: while learning Azure Pipelines with Docker 🐳☁️, it’s completely normal to face more errors ⚠️. Please be patient 🧘‍♂️ and take time to understand them 📘. Errors are part of the learning process, not a problem ✅. We’ll go step by step 🚶‍♂️🚀
+
 ---
 
 ## 📌 Prerequisites
