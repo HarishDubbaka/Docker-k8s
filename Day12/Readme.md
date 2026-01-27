@@ -228,6 +228,10 @@ Follow these steps to verify it:
 
 ![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/5677f0f69eaf36b59e91c9fb5ac0a3395b113097/Day12/azurepipeline.png)
 
+No worries 😊
+
+Just to inform you:
+
 🐳 970371/my-image → built using Azure DevOps Pipeline
 
 🐳 970371/my-image1 → built using GitHub Actions
@@ -247,5 +251,4 @@ Follow these steps to verify it:
 
 Happy Learning & Happy Shipping 🚢🐳
 
-```
 
