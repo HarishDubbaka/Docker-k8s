@@ -215,6 +215,21 @@ Logs out from Docker Hub to clean up credentials and improve security.
 
 ---
 
+## ✅ Step 5: Verify Image in Docker Hub After Successful Push 🐳
+
+Once the Azure Pipeline runs successfully, your Docker image is pushed to **Docker Hub** automatically.
+
+Follow these steps to verify it:
+
+### 🔍 Verify in Docker Hub
+
+1. Log in to **Docker Hub**
+2. Navigate to: MyHub
+
+![Image Alt](image_url).
+
+
+---
 ## ✅ Summary
 
 ✔ Automated Docker image builds
