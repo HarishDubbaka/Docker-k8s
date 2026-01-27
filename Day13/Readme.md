@@ -55,40 +55,38 @@ A Swarm consists of at least **one node**, which can be a physical or virtual ma
 
 ## Docker Nodes
 
-There are two types of nodes in Docker Swarm:
+A **node** is any machine that participates in the Swarm cluster.
 
-### Manager Node
+### Types of Nodes
 
-The Manager Node is responsible for:
+- **Manager Nodes**
+  - Manage the Swarm cluster
+  - Maintain cluster state
+  - Schedule services
+  - Assign tasks to worker nodes
 
-- Maintaining cluster state
-- Scheduling services
-- Exposing Swarm mode HTTP APIs
+- **Worker Nodes**
+  - Run application containers
+  - Execute tasks assigned by managers
+  - Do not manage the cluster
 
-Managers use **Raft consensus** to keep the cluster state consistent.  
-For production environments, it is recommended to run **multiple manager nodes** for high availability.
-
-> ⚠️ A manager node is also a worker node by default.
-
----
-
-### Worker Node
-
-Worker nodes:
-
-- Run Docker containers
-- Execute tasks assigned by the manager
-- Do not manage cluster state
-
-Worker nodes communicate with the manager over HTTP APIs.
-
-A worker node **cannot exist without a manager**, but a manager can exist without workers.
+> A manager node can also act as a worker node by default.
 
 ---
 
-## Services in Docker Swarm
+## Docker Services
 
-Services can be deployed in two modes:
+A **service** defines how an application should run in the Swarm.
+
+A service specifies:
+- The container image to use
+- Number of container replicas
+- Networking and port configuration
+- Restart and update policies
+
+Docker continuously ensures that the **desired number of containers is running**.
+
+### Service Types
 
 - **Replicated Service**  
   Runs a specified number of container replicas across the cluster.
@@ -96,6 +94,19 @@ Services can be deployed in two modes:
 - **Global Service**  
   Runs one container on every node in the Swarm.
 
+---
+
+## Docker Tasks
+
+A **task** is the smallest unit of work in Docker Swarm.
+
+- Each task represents **one running container**
+- Tasks are created by the manager node
+- Tasks are assigned to worker nodes
+
+If a task fails, Docker automatically creates a **new task** to maintain the desired state.
+
+---
 ---
 
 ## Docker Swarm Demo (Beginner Friendly)
