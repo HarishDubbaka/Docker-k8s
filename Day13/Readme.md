@@ -107,7 +107,6 @@ A **task** is the smallest unit of work in Docker Swarm.
 If a task fails, Docker automatically creates a **new task** to maintain the desired state.
 
 ---
----
 
 ## Docker Swarm Demo (Beginner Friendly)
 
@@ -184,24 +183,7 @@ You should see:
 
 ---
 
-## Next Steps
-
-You can now:
-
-* Deploy services
-* Scale applications
-* Experiment with rolling updates and rollbacks
 
 Happy Swarming! 🐳🚀
 
-```
-
----
-
-If you want, I can also:
-- Add **service deployment examples**
-- Convert this into **GitHub-style documentation**
-- Create a **Docker Swarm vs Kubernetes** comparison section
-
-Just say the word 😄
 ```
