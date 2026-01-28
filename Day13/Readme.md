@@ -7,7 +7,7 @@ A Swarm consists of at least one node (physical or virtual machine running Docke
 For persistence, Swarm uses the **Raft consensus implementation**.
 
 
-![Image Alt](image_url).
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/f8eb7bfc1edbc241a7151ace483c3d82c17b94b5/Day13/swarnmanger.png)
 
 ---
 
