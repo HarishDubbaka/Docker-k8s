@@ -6,6 +6,9 @@ The key components of a Docker Swarm are **Docker Nodes**, **Docker Services**, 
 A Swarm consists of at least one node (physical or virtual machine running Docker version 1.12 or later).  
 For persistence, Swarm uses the **Raft consensus implementation**.
 
+
+![Image Alt](image_url).
+
 ---
 
 ## Core Components
