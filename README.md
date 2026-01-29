@@ -40,171 +40,158 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
-### Day 01 🚀 Introduction to Docker
-- 🐋 What is Docker?  
-- 📜 History & Benefits  
-- 🆚 Containerization vs Virtualization  
-- ⚠️ Problems with traditional deployments  
-- 🐳 Why the Docker whale logo  
-- 🔗 Links to resources for learning and practicing  
+## 📅 Day 01 🚀 Introduction to Docker
+- 🐋 What is Docker?
+- 📜 History & Benefits
+- 🆚 Containerization vs Virtualization
+- ⚠️ Problems with traditional deployments
+- 🐳 Why the Docker whale logo
+- 🔗 Learning & practice resources
 
 ---
 
-### Day 02 🏗️ Docker Architecture
-- 🧩 Components: Client, Daemon, Images, Containers & Registry  
-- 🔄 Docker Workflow  
-- 🖥️ Ran my first container and accessed it on `localhost:8080`  
-- 🔗 Links to resources for learning and practicing  
+## 📅 Day 02 🏗️ Docker Architecture
+- 🧩 Client, Daemon, Images, Containers, Registry
+- 🔄 Docker workflow
+- 🖥️ First container on `localhost:8080`
+- 🔗 Resources
 
 ---
 
-### Day 03 💻 Develop with Containers
-- 🤔 Why Develop with Containers?  
-- 🆚 Traditional Development vs Develop with Containers  
-- 🐳 Container-Based Development (Docker)  
-- 🛠️ Hands-On: Develop with Containers  
+## 📅 Day 03 💻 Develop with Containers
+- 🤔 Why containers for development?
+- 🆚 Traditional vs container-based development
+- 🐳 Docker-based dev workflow
+- 🛠️ Hands-on practice
 
 ---
 
-### Day 04 🏗️ Docker Image Layers and Dockerfile Basics
-- 🧱 Immutable Layers  
-- ⚡ Union Filesystem  
-- ✍️ Writable Layer  
-- 📝 Dockerfile & Push to Docker Hub  
+## 📅 Day 04 🏗️ Docker Image Layers & Dockerfile Basics
+- 🧱 Immutable layers
+- ⚡ Union filesystem
+- ✍️ Writable layer
+- 📝 Dockerfile basics
+- 🚀 Push images to Docker Hub
 
 ---
 
-### Day 05 🏗️ Mastering Multi-Stage Docker Builds for React
-- 🚀 Introduction  
-- 🎯 Why Multi-Stage Builds?  
-- 📚 Prerequisites  
-- 🛠️ Step-by-Step Tutorial  
-- 🔍 How It Works: Deconstructing the Dockerfile  
-- ⚠️ Inspecting the Final Container  
-- 🗑️ What Happens if You Delete `index.html`  
-- ♻️ Restoring Deleted Files  
-- 🧰 Useful Docker Commands  
-- ✅ Best Practices  
-- 🔗 Resources  
+## 📅 Day 05 🏗️ Multi-Stage Docker Builds (React)
+- 🚀 Introduction
+- 🎯 Why multi-stage builds
+- 📚 Prerequisites
+- 🛠️ Step-by-step tutorial
+- 🔍 Dockerfile deep dive
+- ⚠️ Inspect final image
+- 🗑️ Delete & restore files
+- 🧰 Useful commands
+- ✅ Best practices
+- 🔗 Resources
 
 ---
 
-### Day 06 🌐 Docker Networking (Ports)
-- 🛡️ Container isolation basics  
-- 🔌 Publishing ports with `-p`  
-- ⚡ Ephemeral ports  
-- 📌 EXPOSE vs `-p` vs `-P`  
-- 🔒 Security considerations  
-- ➡️ Learn how traffic flows: browser → host → container  
+## 📅 Day 06 🌐 Docker Networking (Ports)
+- 🛡️ Container isolation
+- 🔌 Port publishing (`-p`)
+- ⚡ Ephemeral ports
+- 📌 `EXPOSE` vs `-p` vs `-P`
+- 🔒 Security considerations
+- ➡️ Traffic flow: browser → host → container
 
 ---
 
-### Day 07 ⚙️ Overriding Container Defaults in Docker
-- 🐳 Images = defaults, containers = runtime  
-- 🔁 Ports – Avoid conflicts with `-p HOST:CONTAINER`  
-- 🌱 Env Vars – Pass configs at runtime / `.env`  
-- ⚡ Resources – Limit CPU & memory  
-- 🌐 Networking – Default vs custom networks  
-- ▶️ CMD & ENTRYPOINT – Override container start  
-- 🏁 Takeaway – Full control over ports, env, resources, network  
+## 📅 Day 07 ⚙️ Overriding Container Defaults
+- 🐳 Images vs containers
+- 🔁 Port overrides
+- 🌱 Env vars & `.env`
+- ⚡ CPU & memory limits
+- 🌐 Default vs custom networks
+- ▶️ CMD & ENTRYPOINT overrides
+- 🏁 Key takeaways
 
 ---
 
-### Day 08 📦 Persisting Container Data in Docker
-- ❌ Containers forget data  
-- 📝 Layers Recap – Writable layer stores runtime changes  
-- ⚠️ Problem – Data lost on container removal  
-- ✅ Solution – Use Docker Volumes 📦  
-- 🏗️ Create Volume – `docker volume create <name>`  
-- 🔍 Inspect Volume – `docker volume ls / inspect`  
-- ▶️ Run with Volume – `docker run -v <volume>:<path>`  
-- 🏷️ Flags Explained – `-d`, `-p`, `-v`, `--name`  
-- 🧠 Takeaway – Volumes = container memory 💾  
+## 📅 Day 08 📦 Persisting Container Data
+- ❌ Why containers lose data
+- 📝 Writable layer recap
+- ⚠️ The data loss problem
+- ✅ Docker volumes
+- 🏗️ Create & inspect volumes
+- ▶️ Run with volumes
+- 🏷️ Common flags explained
+- 🧠 Takeaway: volumes = persistence
 
 ---
 
-### Day 09 🐳 Docker Compose
-- 🐙 What & Why – Multi-container apps, easier dev & deploy  
-- ✨ Benefits – Simple control, collaboration, portability  
-- 🖥️ Setup – Docker Desktop + YAML file  
-- ⚡ Key Commands – `up`, `down`, `logs`, `ps`, `watch`  
-- 🐍 Example App – Flask + Redis  
-- 🔄 Compose Watch – Live code sync  
-- 🧩 Modular Files – Split services for bigger apps  
-- 🏁 Takeaway – Fast, repeatable, multi-container workflow ✨  
+## 📅 Day 09 🐳 Docker Compose
+- 🐙 What & why Compose
+- ✨ Benefits
+- 🖥️ YAML setup
+- ⚡ Core commands (`up`, `down`, `logs`, `ps`, `watch`)
+- 🐍 Example: Flask + Redis
+- 🔄 Compose Watch
+- 🧩 Modular files
+- 🏁 Takeaway
 
 ---
 
-### Day 10 🐳 Docker Cheatsheet – Quick Reference
+## 📅 Day 10 🐳 Docker Cheatsheet
+### 🔹 Basics
+- `docker --version`, `docker info`, `docker login/logout`
 
-#### 🔹 Docker Basics
-- 🖥️ `docker --version` → Check version  
-- 📊 `docker info` → System info  
-- 🔑 `docker login` / `docker logout` → Docker Hub access  
+### 🔹 Images
+- `docker images`, `pull`, `build`, `tag`, `rmi`
 
-#### 🔹 Images
-- 🗂️ `docker images` → List images  
-- 📥 `docker pull <image>` → Download image  
-- 🏗️ `docker build -t <name>:<tag> .` → Build image  
-- 🗑️ `docker rmi <image>` → Remove image  
-- 🏷️ `docker tag <image> <repo>:<tag>` → Tag image  
+### 🔹 Containers
+- `docker ps`, `run`, `start`, `stop`, `rm`
 
-#### 🔹 Containers
-- 📦 `docker ps` → Running containers  
-- 📦 `docker ps -a` → All containers  
-- ▶️ `docker run <image>` → Run container  
-- 🔌 `docker run -d -p 8080:80 <image>` → Run detached + port mapping  
-- ⏯️ `docker start/stop <container>` → Start/Stop  
-- 🗑️ `docker rm <container>` → Remove container  
+### 🔹 Logs & Access
+- `docker logs`, `docker exec`
 
-#### 🔹 Logs & Access
-- 📜 `docker logs <container>` → View logs  
-- 🖱️ `docker exec -it <container> /bin/bash` → Open shell  
-
-#### 🔹 Cleanup
-- 🧹 `docker system prune` → Remove unused resources  
-- 🧹 `docker system prune -a` → Aggressive cleanup  
+### 🔹 Cleanup
+- `docker system prune`
 
 ---
 
-### Day 11 🐳 Automating Docker Builds with GitHub Actions
-
-#### 📖 Introduction
-Why automate Docker builds? → Manual build/tag/push is repetitive.  
-
-#### ❌ Problem
-- Slow, error-prone, repetitive manual steps.  
-
-#### 🤖 Solution
-- GitHub Actions automates build, tag, and push.  
-
-#### 🛠️ Prerequisites
-- Docker Hub account  
-- Dockerfile ready  
-- Credentials (`DOCKER_USERNAME`, `DOCKER_PASSWORD`)  
-
-#### 🔑 Setup
-- Add secrets in GitHub →  
-  - `DOCKER_USERNAME` (your Docker Hub username, e.g., `970371`)  
-  - `DOCKER_PASSWORD` (Docker Hub token).  
-
-#### 📂 Workflow File
-- Create `.github/workflows/docker-ci.yml`  
-
-#### 🪜 Workflow Steps
-1. 📥 Checkout code  
-2. 🏷️ Extract metadata (tags, annotations)  
-3. 🔑 Log in to Docker Hub  
-4. ⚙️ Set up Docker Buildx  
-5. 🏗️ Build & push image  
-
-#### ✅ Result
-- Every commit to `main` → Auto-build & push to Docker Hub.  
-
-#### 🚀 Benefits
-- Saves time  
-- Reduces errors  
-- Improves collaboration  
+## 📅 Day 11 🤖 GitHub Actions for Docker CI
+- 📖 Why automate builds
+- ❌ Manual workflow issues
+- 🤖 GitHub Actions solution
+- 🛠️ Prerequisites
+- 🔑 Secrets setup
+- 📂 Workflow file
+- 🪜 CI steps
+- ✅ Auto build & push
+- 🚀 Benefits
 
 ---
 
+## 📅 Day 12 ☁️ Azure Pipelines with Docker
+- 🚀 Overview
+- 🐳 Docker Hub integration
+- 🔐 Secure credentials
+- ⚙️ CI configuration
+- 📦 Build & push images
+- 🔍 Verification & best practices
+
+---
+
+## 📅 Day 13 🐳 Docker Swarm & Kubernetes Overview
+- 🐳 Swarm architecture
+- ⚙️ Nodes, services, tasks
+- 🧪 Swarm cluster setup
+- ☸️ Kubernetes vs Swarm
+- 📊 Pros, cons, use cases
+- 🔁 Migration path to Kubernetes
+
+---
+
+## 📅 Day 14 ☸️ Kubernetes (K8s) Fundamentals
+- ☸️ What K8s is & why it exists
+- 🚨 Problems at scale
+- 🤖 How K8s solves them
+- 🏗️ Cluster architecture
+- 🧠 Control plane deep dive
+- 🧑‍💻 Worker node components
+- 💻 Running Kubernetes locally
+
+---
