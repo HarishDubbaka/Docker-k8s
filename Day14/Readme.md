@@ -90,6 +90,8 @@ A **Kubernetes cluster** consists of:
 * A **Control Plane** (management layer)
 * A set of **Worker Nodes** (execution layer)
 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/bf7ac837073ee2d47bada07af6859fd7eeb62a10/Day14/k8s.png)
+
 Every cluster requires **at least one worker node** to run Pods.
 
 In **production environments**, both the control plane and worker nodes typically run across **multiple machines**, ensuring:
