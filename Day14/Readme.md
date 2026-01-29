@@ -3,8 +3,11 @@
 **Kubernetes**, also called **K8s**, is an **open-source platform** that automates the **deployment, scaling, and management** of containerized applications.
 
 🔹 It groups related containers into **logical units**
+
 🔹 Makes applications easy to **manage, discover, and scale**
+
 🔹 Built on **15+ years of Google’s production experience**
+
 🔹 Backed by a strong **open-source community**
 
 Because Kubernetes is **open source**, you can run it:
