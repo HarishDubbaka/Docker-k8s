@@ -81,10 +81,6 @@ It’s a **numeronym**:
 
 ---
 
-Here’s the **same content rewritten clearly, cleanly, and professionally as a `README.md`**, with good structure and easy readability 📘☸️
-
----
-
 # Kubernetes Architecture
 
 Kubernetes follows a **distributed client–server architecture** designed to run containerized applications reliably and at scale.
