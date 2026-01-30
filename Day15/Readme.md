@@ -202,8 +202,13 @@ kubectl get nodes
 kubectl cluster-info --context kind-cka-qacluster
 ```
 
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/d8a4f8ec3c81af4da82399b258dc1a3db1f79ab3/Day15/qavnodes.png)
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/599dc8ab23eb075a1528d4dc9f6820907a87cee7/Day15/qanode.png)
 
+This confirms:
+
+* Cluster is running
+* Nodes status is `Ready`
+  
 ---
 
 ## Working with Multiple Clusters (Contexts)
