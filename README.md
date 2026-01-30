@@ -196,7 +196,7 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
-## 📅 Day 14 ☸️ Kubernetes Cluster Setup Using Kind
+## 📅 Day 15 ☸️ Kubernetes Cluster Setup Using Kind
 - 🧭 Overview – Control Plane & Workers, Why Kind
 - 🧰 Prerequisites – Docker, kubectl, Kind
 - ⚙️ Install Kind – PowerShell / Chocolatey
