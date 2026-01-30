@@ -195,3 +195,18 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 - 💻 Running Kubernetes locally
 
 ---
+
+## 📅 Day 14 ☸️ Kubernetes Cluster Setup Using Kind
+- 🧭 Overview – Control Plane & Workers, Why Kind
+- 🧰 Prerequisites – Docker, kubectl, Kind
+- ⚙️ Install Kind – PowerShell / Chocolatey
+- 🚀 Create Cluster – Single-node, Custom Name
+- 🔍 Interact with Cluster – Nodes, Cluster Info
+- 🧱 Multi-Node Cluster – Config File Setup
+- 🔄 Multiple Clusters – Contexts & Switching
+- ❌ Delete Cluster – Ephemeral Design
+- 🏭 Kind vs Production – Comparison
+- 🛠️ Troubleshooting – Docker, Resources, Logs
+- ✅ Conclusion – Safe, Fast, Ideal for Learning
+
+---
