@@ -133,6 +133,8 @@ kind create cluster --name cka-devcluster
 kubectl get nodes
 ```
 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/d8a4f8ec3c81af4da82399b258dc1a3db1f79ab3/Day15/devnodes.png)
+
 This confirms:
 
 * Cluster is running
@@ -200,6 +202,8 @@ kubectl get nodes
 kubectl cluster-info --context kind-cka-qacluster
 ```
 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/d8a4f8ec3c81af4da82399b258dc1a3db1f79ab3/Day15/qavnodes.png)
+
 ---
 
 ## Working with Multiple Clusters (Contexts)
@@ -211,6 +215,8 @@ Kubernetes stores cluster access details as **contexts** in kubeconfig.
 ```bash
 kubectl config get-contexts
 ```
+
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/d8a4f8ec3c81af4da82399b258dc1a3db1f79ab3/Day15/context.png)
 
 ---
 
