@@ -191,7 +191,7 @@ nodes:
 kind create cluster --name cka-qacluster --config config.yaml
 ```
 
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/6351dd4a5f082ee3531bfa1de511e9eca61c09f9/Day15/devcluster%20i.png)
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/097fde04922ffa36a79d4616f2f29d6ff9990266/Day15/qacluster.png)
 
 ---
 
