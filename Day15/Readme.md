@@ -115,6 +115,9 @@ This setup is ideal for beginners.
 kind create cluster --name cka-devcluster
 ```
 
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/6351dd4a5f082ee3531bfa1de511e9eca61c09f9/Day15/devcluster%20i.png)
+
+
 ### Why use names?
 
 * Helps manage multiple clusters
@@ -185,6 +188,8 @@ nodes:
 ```bash
 kind create cluster --name cka-qacluster --config config.yaml
 ```
+
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/6351dd4a5f082ee3531bfa1de511e9eca61c09f9/Day15/devcluster%20i.png)
 
 ---
 
@@ -308,11 +313,3 @@ Using Kind, you can confidently experiment with Kubernetes without impacting pro
 
 ---
 
-If you want next:
-
-* Sample application deployment
-* Persistent Volumes in Kind
-* CKA practice labs
-* kubeadm vs Kind explanation
-
-Just tell me 👍
