@@ -210,3 +210,16 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 - ✅ Conclusion – Safe, Fast, Ideal for Learning
 
 ---
+
+## 📅 Day 16 ☸️ Kubernetes Pods & Multi-Container Pods
+- 🚀 Introduction to Kubernetes Pods  
+- 🛠️ Creating Pods (Imperative & Declarative)  
+- 🧾 Pod YAML Basics  
+- 🌐 Accessing Pods & Applications  
+- 🔄 Pod Lifecycle  
+- 🧩 Multi-Container Pods  
+- 🧠 Multi-Container Pod Patterns  
+- 🐳 Practical Example (Web + DB + Sidecar)  
+- ⚡ Key Takeaways  
+
+---
