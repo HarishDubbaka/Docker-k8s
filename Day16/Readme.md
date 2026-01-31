@@ -340,7 +340,6 @@ An init container could download configuration files from an external source bef
 An init container could download configuration files from an external source before the main application container starts.
 
 ---
-```
 
 apiVersion: v1
 kind: Pod
@@ -385,15 +384,10 @@ spec:
   - name: db-data
     emptyDir: {}
 
-
-
 Perfect! Let’s access your **multi-container Pod** step by step. Since your Pod has **3 containers** (web app, DB, sidecar), you can pick which container to enter. 🖥️
 
 ---
 
-Here’s your content formatted as a **README.md** file with proper Markdown structure and emojis:
-
-````markdown
 # 🐳 Accessing Multi-Container Pod with MySQL DB
 
 This guide shows how to work with a **multi-container Pod** running a web app, MySQL database, and a logging sidecar in Kubernetes.
@@ -487,8 +481,6 @@ mysql -h 127.0.0.1 -P 3306 -u root -p
 ```
 
 ✅ This allows tools like **MySQL Workbench**, **DBeaver**, or `mysql` CLI to connect to the DB running inside Kubernetes.
-
-```
 
 ---
 
