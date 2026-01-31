@@ -67,13 +67,13 @@ If you want to know all the details of the running pod, you can describe the pod
 ```bash
 kubectl describe pod devweb-server-pod
 ```
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/6e8b419d86182a9557d079cb75f4843172bedef8/Day16/imperative%20describepods.png)
-
 Look for the field:
 
 ```
 Node: <node-name>/<node-IP>
 ```
+
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/6e8b419d86182a9557d079cb75f4843172bedef8/Day16/imperative%20describepods.png)
 
 👉 This tells you exactly which node (control-plane or worker) the Pod is scheduled on.
 
@@ -196,7 +196,6 @@ The confusion comes from the fact that both kubectl create and kubectl apply can
 
 # 🔍 Comparison: `kubectl create` vs `kubectl apply`
 
-## 📖 Overview
 Kubernetes provides multiple ways to manage resources using `kubectl`.  
 Two commonly used commands are **`create`** and **`apply`**, but they serve different purposes and often confuse beginners.
 
@@ -496,3 +495,5 @@ mysql -h 127.0.0.1 -P 3306 -u root -p
   - Adapter
 
 - 🖥️ Use **`kubectl exec`** and **port-forwarding** for debugging and accessing containers.
+
+---
