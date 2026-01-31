@@ -57,8 +57,8 @@ kubectl get pods
 kubectl get pods -w
 ```
 
-getpods
-![Image Alt](image_url)
+
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/fdb1bb81d8fbae2857e88829a0e2bbf0f4fdf589/Day16/imperative%20getpods.png)
 
 ---
 
@@ -69,6 +69,7 @@ If you want to know all the details of the running pod, you can describe the pod
 ```bash
 kubectl describe pod devweb-server-pod
 ```
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/fdb1bb81d8fbae2857e88829a0e2bbf0f4fdf589/Day16/imperative%20getpods.png)
 
 Look for the field:
 
@@ -83,6 +84,8 @@ To see which cluster node the pod is running on:
 ```bash
 kubectl get pods -o wide
 ```
+
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/fdb1bb81d8fbae2857e88829a0e2bbf0f4fdf589/Day16/imperative%20getpods.png)
 
 ---
 
