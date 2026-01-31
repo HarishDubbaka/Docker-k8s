@@ -241,11 +241,11 @@ Pod lifecycle phases:
 
 Following are the pod lifecycle phases.
 
-Pending: It means the pod creation request is successful, however, the scheduling is in process. For example, it is in the process of downloading the container image.  
-Running: The pod is successfully running and operating as expected. For example, the pod is service client requests.  
-Succeeded: All containers inside the pod have been successfully terminated. For example, the successful completion of a CronJob object.  
-Failed: All pods are terminated but at least one container has terminated in failure. For example, the application running inside the pod is unable to start due to a config issue and the container exits with a non-zero exit code.  
-Unknown: Unknown status of the pod. For example, the cluster is unable to monitor the status of the pod.
+* **Pending**: It means the pod creation request is successful, however, the scheduling is in process. For example, it is in the process of downloading the container image.  
+* **Running**: The pod is successfully running and operating as expected. For example, the pod is service client requests.  
+* **Succeeded**: All containers inside the pod have been successfully terminated. For example, the successful completion of a CronJob object.  
+* **Failed**: All pods are terminated but at least one container has terminated in failure. For example, the application running inside the pod is unable to start due to a config issue and the container exits with a non-zero exit code.  
+* **Unknown**: Unknown status of the pod. For example, the cluster is unable to monitor the status of the pod.
 
 If you describe the pod, you can view the phase of the pod. Here is an example.  
 pod lifecyle phases - pending,Running,Succeeded,Failed,Unknown pod status
@@ -335,12 +335,12 @@ While init containers are not strictly sidecars, they are often used in multi-co
 An init container could download configuration files from an external source before the main application container starts.
 
 ---
-**Example Use Case:**
 
-An init container could download configuration files from an external source before the main application container starts.
+**🧩 Multi-Container Pod Example (App + DB + Log Sidecar):**
 
----
+📄 Pod YAML (App + DB + Sidecar)
 
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -385,7 +385,7 @@ spec:
     emptyDir: {}
 
 Perfect! Let’s access your **multi-container Pod** step by step. Since your Pod has **3 containers** (web app, DB, sidecar), you can pick which container to enter. 🖥️
-
+```
 ---
 
 # 🐳 Accessing Multi-Container Pod with MySQL DB
@@ -484,3 +484,15 @@ mysql -h 127.0.0.1 -P 3306 -u root -p
 
 ---
 
+# ⚡ Key Takeaways – Kubernetes Pods & Multi-Container Pods
+
+- 🐳 **Pods** are the unit of deployment in Kubernetes.
+
+- 🧩 **Multi-container pods** are useful for tightly coupled containers that need to work together.
+
+- 🌐 **Containers share network & storage**, enabling patterns like:
+  - Sidecar
+  - Ambassador
+  - Adapter
+
+- 🖥️ Use **`kubectl exec`** and **port-forwarding** for debugging and accessing containers.
