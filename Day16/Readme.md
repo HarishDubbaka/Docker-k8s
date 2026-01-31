@@ -69,7 +69,7 @@ If you want to know all the details of the running pod, you can describe the pod
 ```bash
 kubectl describe pod devweb-server-pod
 ```
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/fdb1bb81d8fbae2857e88829a0e2bbf0f4fdf589/Day16/imperative%20getpods.png)
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/6e8b419d86182a9557d079cb75f4843172bedef8/Day16/imperative%20describepods.png)
 
 Look for the field:
 
