@@ -100,15 +100,23 @@ As we discussed in the Kubernetes Object blog, every Kubernetes object has some 
 Let's take a look at the Kubernetes pod object.
 
 Parameter	Description
-apiVersion	The API version of pod. In our case its v1
-kind	Kind of the object. Its pod
-metadata	metadata is used to uniquely identify and describe the pod
-– labels (set of key-value pairs to represent the pod). This is similar to tagging in cloud environments. Every object must be labeled with standard labels. It helps in grouping the objects.
-– name (name of the pod)
-– namespace (namespace for the pod)
-– annotations (additional data in key-value format)
-spec	Under the ‘spec’ section we declare the desired state of the pod. Those are the specifications of the containers we want to run inside the pod.
-containers	Under containers, we declare the desired state of the containers inside the pod. The container image, exposed port, etc.
+# 📘 Kubernetes Pod Parameters and Descriptions
+
+| Parameter   | Description                                                                 |
+|-------------|-----------------------------------------------------------------------------|
+| **apiVersion** | The API version of the Pod. For Pods, it is always `v1`.                   |
+| **kind**       | Defines the type of Kubernetes object. In this case, it is `Pod`.          |
+| **metadata**   | Metadata uniquely identifies and describes the Pod. Includes:              |
+|                | • **labels** → Key-value pairs used to group and organize Pods (similar to tagging in cloud environments). |
+|                | • **name** → The name of the Pod.                                          |
+|                | • **namespace** → The namespace in which the Pod resides.                  |
+|                | • **annotations** → Additional non-identifying metadata in key-value format (e.g., documentation, hints). |
+| **spec**       | Declares the desired state of the Pod. Defines specifications for the containers to run inside the Pod. |
+| **containers** | A list of containers that run inside the Pod. Each container definition includes: |
+|                | • **name** → Identifier for the container.                                |
+|                | • **image** → The container image to run.                                 |
+|                | • **ports** → Ports exposed by the container.                             |
+|                | • Other optional fields like resources, environment variables, and probes. |
 
 We have now looked at a basic Pod YAML manifest. It's important to note that this manifest supports many parameters. We will gradually explore these additional parameters with a hands-on, practical approach.
 
