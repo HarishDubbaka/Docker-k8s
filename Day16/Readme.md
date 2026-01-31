@@ -250,7 +250,7 @@ Following are the pod lifecycle phases.
 If you describe the pod, you can view the phase of the pod. Here is an example.  
 pod lifecyle phases - pending,Running,Succeeded,Failed,Unknown pod status
 
-![Image Alt](image_url) podstatus
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/e7435197c02ea7948240f705bc9ac94b7d5f4da4/Day16/pod%20status.png).
 
 ---
 
