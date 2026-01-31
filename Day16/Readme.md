@@ -25,9 +25,7 @@ You can create a pod in two ways:
 
 > ⚠️ **Note:** Kubectl imperative commands are very important when you appear for Kubernetes Certifications, as they save time compared to declarative approaches.
 
-kubectl Imperative Command
-
-## ⚙️ Imperative Commands
+## ⚙️ kubectl Imperative Commands
 Imperative commands are primarily used for:
 - **Learning**: Quick experimentation with Kubernetes resources.
 - **Testing**: Rapid prototyping without writing manifests.
@@ -102,7 +100,6 @@ As we discussed in the Kubernetes Object blog, every Kubernetes object has some 
 
 Let's take a look at the Kubernetes pod object.
 
-Parameter	Description
 # 📘 Kubernetes Pod Parameters and Descriptions
 
 | Parameter   | Description                                                                 |
