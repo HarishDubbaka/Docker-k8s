@@ -335,5 +335,160 @@ While init containers are not strictly sidecars, they are often used in multi-co
 An init container could download configuration files from an external source before the main application container starts.
 
 ---
+**Example Use Case:**
+
+An init container could download configuration files from an external source before the main application container starts.
+
+---
 ```
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-db-sidecar-pod
+spec:
+  containers:
+  # 🧠 Web Application
+  - name: web-app
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+    env:
+    - name: DB_HOST
+      value: localhost
+    - name: DB_PORT
+      value: "3306"
+
+  # 🗄️ Database Container
+  - name: mysql-db
+    image: mysql:5.7
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: rootpassword
+    ports:
+    - containerPort: 3306
+    volumeMounts:
+    - name: db-data
+      mountPath: /var/lib/mysql
+
+  # 📜 Sidecar Container (Log watcher)
+  - name: db-log-sidecar
+    image: busybox
+    #command: ["sh", "-c", "tail -f /var/log/mysql.log"]
+	command: ["sh", "-c", "while true; do sleep 3600; done"]
+    volumeMounts:
+    - name: db-data
+      mountPath: /var/lib/mysql
+
+  # 💾 Shared Volume
+  volumes:
+  - name: db-data
+    emptyDir: {}
+
+
+
+Perfect! Let’s access your **multi-container Pod** step by step. Since your Pod has **3 containers** (web app, DB, sidecar), you can pick which container to enter. 🖥️
+
+---
+
+Here’s your content formatted as a **README.md** file with proper Markdown structure and emojis:
+
+````markdown
+# 🐳 Accessing Multi-Container Pod with MySQL DB
+
+This guide shows how to work with a **multi-container Pod** running a web app, MySQL database, and a logging sidecar in Kubernetes.
+
+---
+
+## 1️⃣ See Containers Inside the Pod
+
+```bash
+kubectl get pod app-db-sidecar-pod -o jsonpath="{.spec.containers[*].name}"
+````
+
+✅ Example output:
+
+```
+web-app mysql-db log-sidecar
+```
+
+---
+
+## 2️⃣ Exec into a Specific Container
+
+**Syntax:**
+
+```bash
+kubectl exec -it <pod-name> -c <container-name> -- /bin/sh
+```
+
+**Examples:**
+
+**Web app container (nginx)**
+
+```bash
+kubectl exec -it app-db-sidecar-pod -c web-app -- /bin/sh
+```
+
+**MySQL container**
+
+```bash
+kubectl exec -it app-db-sidecar-pod -c mysql-db -- /bin/sh
+```
+
+**Sidecar container (logs)**
+
+```bash
+kubectl exec -it app-db-sidecar-pod -c log-sidecar -- /bin/sh
+```
+
+> 📝 Note: Some containers may only have `/bin/sh` or `/bin/bash` depending on the image.
+
+---
+
+## 3️⃣ Accessing the MySQL Database
+
+Once inside the MySQL container, connect to the DB:
+
+```bash
+mysql -u root -p
+```
+
+Enter your root password (as defined in the container spec).
+
+---
+
+## 4️⃣ Access the Web App
+
+If your web container exposes port 80:
+
+```bash
+kubectl port-forward pod/app-db-sidecar-pod 8080:80
+```
+
+Open your browser: 👉 [http://localhost:8080](http://localhost:8080)
+
+> All containers share the same Pod IP, so the web app can connect to MySQL via `localhost:3306`.
+
+---
+
+## 5️⃣ Connect to MySQL from Outside the Pod
+
+You can port-forward the MySQL container port (3306) to your local machine:
+
+```bash
+kubectl port-forward pod/app-db-sidecar-pod 3306:3306 -c mysql-db
+```
+
+Then, use any MySQL client:
+
+```bash
+mysql -h 127.0.0.1 -P 3306 -u root -p
+```
+
+✅ This allows tools like **MySQL Workbench**, **DBeaver**, or `mysql` CLI to connect to the DB running inside Kubernetes.
+
+```
+
+---
 
