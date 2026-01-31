@@ -85,7 +85,7 @@ To see which cluster node the pod is running on:
 kubectl get pods -o wide
 ```
 
-![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/fdb1bb81d8fbae2857e88829a0e2bbf0f4fdf589/Day16/imperative%20getpods.png)
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/d78d13f2bdf32e324119117c6a2c0b4bba34e031/Day16/imperative%20pod%20o%20wide.png)
 
 ---
 
