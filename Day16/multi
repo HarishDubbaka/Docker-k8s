@@ -1,0 +1,301 @@
+```md
+Understand Pods, the smallest deployable compute object in Kubernetes, and the higher-level abstractions that help you to run them.
+A workload is an application running on Kubernetes. Whether your workload is a single component or several that work together, on Kubernetes you run it inside a set of pods. In Kubernetes, a Pod represents a set of running containers on your cluster.
+
+A container as we all know, is a self-contained environment where we package applications and their dependencies. Typically, a container runs a single process (Although there are ways to run multiple processes). Each container gets an IP address and can attach volumes and control CPU and memory resources, among other things. All these happen via the concepts of namespaces and control groups.
+
+Kubernetes is a container orchestration system for deploying, scaling, and managing containerized applications, and it has its own way of running containers. We call it a pod. A pod is the smallest deployable unit in Kubernetes that represents a single instance of an application.
+
+So how does it differ from a container?
+
+A container is a single unit. However, a pod can contain more than one container. You can think of pods as a box that can hold one or more containers together.
+
+Pod provides a higher level of abstraction that allows you to manage multiple containers as a single unit. Here instead of each container getting an IP address, the pod gets a single unique IP address and containers running inside the pod use localhost to connect to each other on different ports.
+
+Creating Pod (Practical Examples)
+You can create a pod in two ways
+
+Using the kubectl imperative command: Primarily used for learning and testing purposes. The imperative command comes with its own limitations.
+Declarative approach: Using YAML manifest. When working on projects, the YAML manifest is used to deploy pods.
+
+Note: Kubectl imperative commands are very important when you appear for Kubernetes Certifications. which saves the times compared to delclartiv
+
+kubectl run devweb-server-pod \
+  --image=nginx:1.14.2 \
+  --restart=Never \
+  --port=80 \
+  --labels=app=web-server,environment=production \
+  --annotations description="This pod runs the devweb server"
+
+Here the pod gets deployed in the default namespace. You can get the status of the deployed pod kubectl.
+
+kubectl get pods or kubectl get pods -w
+
+Once the pod is deployed you will see the pod Running status as shown below.
+
+Describe a Pod
+If you want to know all the details of the running pod, you can describe the pod using kubectl.
+
+kubectl describe pod web-server-pod
+
+- Look for the field:
+Node: <node-name>/<node-IP>
+
+👉 This tells you exactly which node (control-plane or worker) the Pod is scheduled on
+
+if you want so see on which cluster nodes it is running
+
+kubectl get pods -o wide
+NAME                READY   STATUS    RESTARTS   AGE     IP           NODE                    NOMINATED NODE   READINESS GATES
+devweb-server-pod   1/1     Running   0          7m18s   10.244.1.2   cka-qacluster-worker    <none>           <none>
+
+Pod YAML (Object Definition)
+
+Now that we have a basic understanding of a Pod, let's have a look at how we define a Pod. Pod is a native Kubernetes Object and if you want to create a pod, you need to declare the pod requirements in YAML format.
+You can also create a pod using the kubectl imperative command. Which we will see in a post this topic.
+
+Here is an example Pod YAML that creates an Nginx web server pod. This YAML is nothing but a declarative desired state of a pod
+
+Let's understand this pod YAML. Once you understand the basic YAML it will be easier for you to work with pods and associated objects like deployment, daemonset, statefulset, etc.
+
+As we discussed in the Kubernetes Object blog, every Kubernetes object has some common set of parameters. The values change as per the kind of object we are creating.
+
+Let's take a look at the Kubernetes pod object.
+
+Parameter	Description
+apiVersion	The API version of pod. In our case its v1
+kind	Kind of the object. Its pod
+metadata	metadata is used to uniquely identify and describe the pod
+– labels (set of key-value pairs to represent the pod). This is similar to tagging in cloud environments. Every object must be labeled with standard labels. It helps in grouping the objects.
+– name (name of the pod)
+– namespace (namespace for the pod)
+– annotations (additional data in key-value format)
+spec	Under the ‘spec’ section we declare the desired state of the pod. Those are the specifications of the containers we want to run inside the pod.
+containers	Under containers, we declare the desired state of the containers inside the pod. The container image, exposed port, etc.
+We have now looked at a basic Pod YAML manifest. It's important to note that this manifest supports many parameters. We will gradually explore these additional parameters with a hands-on, practical approach.
+
+Now that we have some basic understanding of a Pod, let's create a pod.
+
+Method 1: Create Pod Using Declarative YAML
+When working on real projects, you will have to create pods mostly through a declarative approach.
+
+Let's see how we can create a pod using the YAML manifest.
+
+Create a file named nginx.yaml with the following contents.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-server-pod
+  labels:
+    app: web-server
+    environment: production
+  annotations:
+    description: This pod runs the web server
+spec:
+  containers:
+  - name: web-server
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+
+Now, to deploy the manifest, you need to execute the following kubectl command with the file name.
+
+kubectl create -f nginx.yaml
+Should we remember each parameter to create the YAML? No. You can use the --dry-run flag to create the YAML file.
+
+diffenrence between create and apply
+
+Here is an example.
+
+kubectl run nginx-pod --image=nginx:1.14.2 --dry-run=client -o yaml
+You can save the YAML output by redirecting the dry-run output to a file.
+
+kubectl run nginx-pod --image=nginx:1.14.2 --dry-run=client -o yaml > nginx-pod.yaml
+
+- --dry-run=client → Tells kubectl not to actually send the request to the Kubernetes API server.
+- It only validates your command locally.
+- It generates the YAML manifest for the Pod instead of creating it.
+- -o yaml → Outputs the Pod definition in YAML format.
+- > nginx-pod.yaml → Redirects that YAML output into a file called nginx-pod.yaml.
+
+✅ Answer
+No — --dry-run=client will not create the Pod.
+It only prepares the YAML manifest so you can review or save it.
+If you want to actually create the Pod, you would run:
+kubectl apply -f nginx-pod.yaml
+
+Access Application Running In a Pod
+Now we have a running pod with the Nginx web server. The whole idea is to deploy and access the application running inside the pod.
+
+Kubectl offers a port-forward command to access running pods in the Kubernetes cluster from the local workstation.
+
+We have a running pod named web-server-pod. Let's access it via the port-forward command.
+
+kubectl port-forward pod/web-server-pod 8080:80
+You should see an output as shown below.
+
+kubectl port forward to access pod in local system
+Now if you go to the browser and access http://localhost:8080, you should see the Nginx homepage as shown below. The webpage is served by our Nginx web server pod.
+
+kubectl port forward to access nginx pod
+Now you can disconnect port forwarding by pressing CTRL+C.
+
+Here is what happens when you run kubectl port-forward
+
+Kubectl binds the specified port in your local system. In our case, it's 8080.
+It then communicated with the Kubernetes cluster API to establish a tunnel (a single HTTP connection) to the required node and then to the specified pod and container port, ie 80.
+Note: The kubectl port forward is more of a debugging utility. You need to use the Kubernetes Service object to expose an application running in a pod. We will look at Kubernetes service concepts practically in another blog
+Access Pod Shell
+We have learned how to access the application running inside the pod.
+
+Now what if you want to get access to the pod shell?
+
+There are many use cases where you need terminal access to the pod. One main use case is debugging and pod troubleshooting.
+
+Here is where kubectl exec command comes in handy.
+
+You can access the shell of web-server-pod using the following command.
+
+kubectl exec -it web-server-pod -- //bin/sh
+In the following output, I am executing whoami command inside the pod  and hostname which host we are using .
+
+kubectl exect to pod shell
+Note: Container images are typically designed to be very minimal, so you might find that you are unable to execute all the commands you would on normal Linux systems. This limitation depends on how the image was built and the utilities that are included in the container image
+
+Pod Lifecycle
+
+Another important concept you should know about a pod is its lifecycle.
+
+A pod is typically managed by a controller like ReplicaSet Controller, Deployment controller, etc. When you create a single pod using YAML, it is not managed by any controller. In both cases, a pod goes through different lifecycle phases.
+
+Following are the pod lifecycle phases.
+
+Pending: It means the pod creation request is successful, however, the scheduling is in process. For example, it is in the process of downloading the container image.
+Running: The pod is successfully running and operating as expected. For example, the pod is service client requests.
+Succeeded: All containers inside the pod have been successfully terminated. For example, the successful completion of a CronJob object.
+Failed: All pods are terminated but at least one container has terminated in failure. For example, the application running inside the pod is unable to start due to a config issue and the container exits with a non-zero exit code.
+Unknown: Unknown status of the pod. For example, the cluster is unable to monitor the status of the pod.
+If you describe the pod, you can view the phase of the pod. Here is an example.
+
+pod lifecyle phases - pending pod
+If you want to know more information, check out the detailed blog on pod lifecycle.
+
+Multi-Container Pods in Kubernetes: Managing Multiple Containers within a Single Pod
+In Kubernetes, pods are the smallest deployable units that can contain one or more containers. While it's common to have a single container per pod, there are scenarios where running multiple containers in the same pod is beneficial. Multi-container pods allow you to group related containers that share the same network namespace and storage, and can be managed together as a unit.
+
+What is a Multi-Container Pod?
+A multi-container pod in Kubernetes is a pod that encapsulates more than one container, which run together on the same node. These containers share the same network IP, which means they can communicate with each other via localhost. Additionally, they share storage volumes, so they can also exchange data through shared file systems.
+
+While most pods are designed to run a single container, multi-container pods are useful when the containers have tightly coupled functionality and need to be managed together. This can be useful for scenarios such as:
+
+Supporting a main application with auxiliary services, like logging or monitoring.
+Sidecar containers that augment or enhance the functionality of the main container.
+Ambassador containers that proxy requests to the main application.
+Adapter containers that help transform data between formats.
+Why Use Multi-Container Pods?
+There are several reasons why you might want to run multiple containers in a single pod, rather than deploying them as separate pods:
+
+Shared Network: All containers in a pod share the same IP address and port space. This allows containers to communicate with each other using localhost or the internal pod DNS name, without needing to expose external network ports.
+
+Shared Storage Volumes: Containers in the same pod can mount the same volumes, making it easy to share files between containers. For example, one container might write logs to a shared volume, and another container might aggregate and process those logs.
+
+Atomic Management: Kubernetes treats all containers in a pod as a unit. This means that when you scale, deploy, or delete the pod, all containers are treated together. This is important when the containers have tightly coupled functionality, such as a main application and a logging sidecar.
+
+Tight Coupling of Containers: Multi-container pods are ideal when multiple containers need to operate in close coordination. For example, a main application may need a sidecar container to handle specific tasks like logging, monitoring, or data processing.
+
+Types of Multi-Container Pod Patterns
+Kubernetes supports several patterns for running multiple containers in a single pod. The most common patterns are:
+
+1. Sidecar Pattern
+The sidecar pattern is one of the most popular use cases for multi-container pods. In this pattern, one container in the pod is the "main" application container, and one or more additional containers (sidecars) augment its functionality.
+
+Example Use Case:
+
+A web server container is the main application, and a sidecar container could handle logging, proxying, or monitoring.
+The sidecar containers run alongside the main container and share the same network and storage resources, but they handle different tasks. They work together to provide complementary services for the main application.
+
+Example:
+
+A nginx web server with a sidecar container running a log shipping agent (e.g., fluentd) that collects logs and sends them to a centralized logging service.
+2. Ambassador Pattern
+In the ambassador pattern, a container acts as a proxy to facilitate communication between the pod's main container and external services. This pattern is used when your application needs to interact with other services outside the pod, but you want to encapsulate the interaction within the pod.
+
+Example Use Case:
+
+A container that handles communication between a microservice and an external database or an API, while the main application container performs the business logic.
+The ambassador container acts as a gateway or proxy for the main container, simplifying external communication.
+
+3. Adapter Pattern
+The adapter pattern is used when you need a container to modify the data before it is passed to or after it is received by the main application. The adapter container adapts or transforms the data format or protocol to fit the needs of the main container.
+
+Example Use Case:
+
+A main container running an application that consumes data in JSON format, while the adapter container transforms incoming data from XML to JSON.
+This pattern can also be used when integrating legacy systems with newer services that may use different data formats or protocols.
+
+4. Init Containers
+Init containers are special containers that run before the main application container(s) in a pod start. Init containers allow you to perform initialization tasks, such as setting up configuration files or performing health checks, before the main application containers run.
+
+While init containers are not strictly sidecars, they are often used in multi-container pods for initial setup tasks.
+
+Example Use Case:
+
+An init container could download configuration files from an external source before the main application container starts.
+
+How to Define Multi-Container Pods in Kubernetes
+To define a multi-container pod in Kubernetes, you simply list multiple containers within the spec.containers field of the pod definition.
+
+Example YAML:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multi-container-pod-patterns
+spec:
+  containers:
+  # --- Main Application Container ---
+  - name: main-app
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    env:
+    - name: DB_HOST
+      value: localhost
+    - name: DB_PORT
+      value: "5432"
+    volumeMounts:
+    - name: log-volume
+      mountPath: /var/log/nginx
+
+  # --- Sidecar Pattern (Log Collector) ---
+  - name: log-collector
+    image: busybox
+    command: ["sh", "-c", "tail -n+1 -f /var/log/nginx/access.log"]
+    volumeMounts:
+    - name: log-volume
+      mountPath: /var/log/nginx
+
+  # --- Ambassador Pattern (Proxy for DB) ---
+  - name: db-ambassador
+    image: envoyproxy/envoy:v1.25.0
+    args: ["-c", "/etc/envoy/envoy.yaml"]
+    volumeMounts:
+    - name: envoy-config
+      mountPath: /etc/envoy
+
+  # --- Adapter Pattern (Metrics Translator) ---
+  - name: metrics-adapter
+    image: prom/statsd-exporter
+    args: ["--statsd.listen-udp=:9125", "--statsd.listen-tcp=:9125"]
+    ports:
+    - containerPort: 9125
+
+  # --- Shared Volumes ---
+  volumes:
+  - name: log-volume
+    emptyDir: {}
+  - name: envoy-config
+    configMap:
+      name: envoy-config
+```
