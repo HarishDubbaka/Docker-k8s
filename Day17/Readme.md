@@ -1,4 +1,16 @@
-# Kubernetes ReplicationController (RC) – Complete Guide
+# 🐳 Kubernetes Controllers Guide – RC, RS & Deployment
+
+This guide covers the three main Kubernetes controllers used to manage Pods:
+
+- **ReplicationController (RC)** – legacy controller for maintaining Pod replicas  
+- **ReplicaSet (RS)** – modern replacement for RC, often managed by Deployments  
+- **Deployment** – high-level controller for scaling, rolling updates, and rollback  
+
+Learn how Kubernetes achieves **self-healing**, **scaling**, and **high availability** using these controllers.
+
+---
+
+# Kubernetes ReplicationController (RC)  
 
 In Kubernetes, **ReplicationController (RC)** and **ReplicaSet** are essential components used for managing and maintaining the desired number of pod replicas to ensure **high availability** and **fault tolerance** of applications. They enable **self-healing**, **load distribution**, and **basic scaling** within a Kubernetes cluster.
 
@@ -371,7 +383,7 @@ ReplicaSets are usually created and managed **automatically by Deployments**.
 
 ---
 
-# Kubernetes ReplicaSet (RS) –
+# Kubernetes ReplicaSet (RS)
 
 In Kubernetes, a **ReplicaSet (RS)** is a core component designed to ensure the **availability**, **consistency**, and **resilience** of Pods in a cluster. It maintains the desired number of pod replicas and automatically replaces Pods if they fail or are deleted.
 
