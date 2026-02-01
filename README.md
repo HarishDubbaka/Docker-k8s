@@ -223,3 +223,16 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 - ⚡ Key Takeaways  
 
 ---
+
+## 📅 Day 17 ☸️Kubernetes Controllers (Workload Management)
+- ⚙️ Kubernetes Controllers Overview
+- 🧱 ReplicationController (RC)
+- 🔁 ReplicaSet (RS)
+- 🚀 Deployment
+- 📊 RC vs RS vs Deployment
+- 💡 Why Deployments Matter
+- ⚖️ Tips & Best Practices
+- 📚 References & Resources
+- 🌐 Next: Kubernetes Services
+
+---
