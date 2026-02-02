@@ -238,7 +238,7 @@ This guide shows how to configure a **Kind** Kubernetes cluster with extra port 
 
 ---
 
-## 1️⃣ Create Kind Cluster with Extra Port Mappings
+## Create Kind Cluster with Extra Port Mappings
 
 NodePort services only work from your host if the cluster is configured with extra port mappings. Here’s an example cluster configuration:
 
@@ -268,7 +268,7 @@ kind create cluster --config kind-config.yaml
 
 ---
 
-## 2️⃣ NodePort Service
+## NodePort Service
 
 A **NodePort** service exposes a Pod to external traffic. NodePort services open ports in the range **30000–32767**.
 
@@ -297,7 +297,7 @@ kubectl apply -f nodeport.yaml
 
 ---
 
-## 3️⃣ Accessing the Service
+## Accessing the Service
 
 1. Find the Node IP (for Kind, this is always `localhost`):
 
@@ -320,7 +320,7 @@ You should see the NGINX welcome page:
 
 ---
 
-## 4️⃣ Verify Deployment
+## Verify Deployment
 
 Check your Pods:
 
@@ -351,7 +351,7 @@ nginx-nodeport    10.244.0.7:80,10.244.0.8:80,10.244.0.9:80
 
 ---
 
-## 5️⃣ Quick Rules
+## Quick Rules
 
 | Resource   | Creates Endpoints? |
 | ---------- | ------------------ |
