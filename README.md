@@ -236,3 +236,16 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 - 🌐 Next: Kubernetes Services
 
 ---
+
+## 📅 Day 18 ☸️ Networking & Services
+- ⚓ Kubernetes Services Overview 
+- 🏠 ClusterIP Service 
+- 🔌 NodePort Service
+- ☁️ LoadBalancer Service  
+- 🌐 ExternalName Service  
+- 🔍 Endpoints Explained 
+- 💡 Quick Tips & Best Practices 
+- 📚 References & Resources
+- 🌐 Next: Namespaces in Kubernetes
+
+---
