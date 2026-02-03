@@ -117,7 +117,6 @@ kubectl get nodes -n dev
 
 
 By default, every Kubernetes cluster has a default namespace for resources that don’t specify one. Other system namespaces like kube-system and kube-public are used for Kubernetes components and shared information.
-Namespaces are not needed for small clusters but become essential in large-scale deployments where organizing resources efficiently is a priority
 
 ---
 
