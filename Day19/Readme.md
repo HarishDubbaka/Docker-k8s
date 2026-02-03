@@ -347,4 +347,6 @@ When working with Kubernetes, understanding **resource scope** saves time and pr
 > 🤣 *If `-n` doesn’t work… the resource is global.*
 
 ---
-
+📌 **Final Tip:**  
+Namespaces organize workloads.  
+Cluster-scoped resources define the Kubernetes cluster itself.
