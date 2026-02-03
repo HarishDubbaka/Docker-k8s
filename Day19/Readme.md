@@ -321,10 +321,30 @@ With the concepts, examples, and best practices covered here, you are well-equip
 
 ---
 
-🧠 **One-line takeaway:**
+## 🧠 Namespace-Scoped vs Cluster-Scoped — Quick Reminder ☸️
 
-> Namespaces are folders for Kubernetes resources — keeping clusters clean, secure, and manageable.
-
-🤣 *Most Kubernetes mistakes start with: “Oops… wrong namespace.”*
+When working with Kubernetes, understanding **resource scope** saves time and prevents mistakes.
 
 ---
+
+### ✅ Source of Truth
+**`kubectl api-resources`** is the **ultimate source of truth** for knowing whether a resource is:
+- Namespace-scoped  
+- Cluster-scoped  
+
+---
+
+### 🔑 Golden Rule
+- **If it runs your app → Namespace-Scoped**
+- **If it defines the cluster → Cluster-Scoped**
+
+---
+
+### 🤣 Easy Debug Trick
+- If `-n <namespace>` **works** → Namespace-scoped  (Pods, Services, Deployments)
+- If `-n <namespace>` **does NOT work** → Cluster-scoped  (Nodes, PVs, CRDs)
+
+> 🤣 *If `-n` doesn’t work… the resource is global.*
+
+---
+
