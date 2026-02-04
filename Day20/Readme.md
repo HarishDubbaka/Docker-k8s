@@ -399,7 +399,6 @@ Ready to copy-paste into your repo.
 
 ---
 
-````md
 # Kubernetes Jobs ☸️
 
 A **Job** in Kubernetes is used to run **short-lived, one-time, or batch tasks**.  
@@ -709,7 +708,7 @@ CronJobs are perfect for **automated maintenance, periodic backups, and schedule
 
 ---
 
-Summary
+## Summary
 
 DaemonSet → Ensures a Pod runs on all (or selected) nodes. Great for system services.
 
