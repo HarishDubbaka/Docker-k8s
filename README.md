@@ -237,15 +237,41 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
+---
 ## 📅 Day 18 ☸️ Networking & Services
-- ⚓ Kubernetes Services Overview 
-- 🏠 ClusterIP Service 
+- ⚓ Kubernetes Services Overview
+- 🏠 ClusterIP Service
 - 🔌 NodePort Service
-- ☁️ LoadBalancer Service  
-- 🌐 ExternalName Service  
-- 🔍 Endpoints Explained 
-- 💡 Quick Tips & Best Practices 
+- ☁️ LoadBalancer Service
+- 🌐 ExternalName Service
+- 🔍 Endpoints Explained
+- 💡 Quick Tips & Best Practices
 - 📚 References & Resources
 - 🌐 Next: Namespaces in Kubernetes
+
+---
+
+## 📅 Day 19 ☸️ Kubernetes Namespaces 📂
+- 📖 Introduction
+- 🎯 Why Namespaces?
+- ☸️ Namespace-Scoped vs Cluster-Scoped Resources
+- 📊 Benefits of Namespaces
+- ⚠️ Key Concepts
+- 📦 Default Namespaces
+- 🛠️ Creating & Managing Namespaces
+- 🔧 Working With Resources
+- 🔄 Switching Default Namespace
+- 📘 Examples
+- ✅ Best Practices
+- 🏁 Conclusion
+- ✨ Quick Tips & Tricks
+
+---
+
+## 📅 Day 20 ☸️ Kubernetes Workloads
+- 📌 DaemonSets
+- 🏃 Jobs
+- ⏰ CronJobs
+- 📝 Summary
 
 ---
