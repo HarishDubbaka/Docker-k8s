@@ -286,11 +286,4 @@ Taints and tolerations provide **powerful, flexible scheduling control** in Kube
 
 When combined with **labels and node selectors**, they form a robust and exam-relevant scheduling strategy—essential knowledge for **CKA** and real-world clusters.
 
----
 
-If you want, I can also:
-
-* Add **CKA exam shortcuts**
-* Convert this into a **blog-ready article**
-* Add **nodeSelector + affinity examples**
-* Review it as if it were **exam documentation**
