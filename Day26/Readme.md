@@ -245,5 +245,3 @@ Kubernetes Horizontal Pod Autoscaler enables applications to automatically respo
 
 Happy autoscaling 🚀
 
-Just tell me 👍
-```
