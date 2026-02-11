@@ -237,7 +237,6 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
----
 ## 📅 Day 18 ☸️ Networking & Services
 - ⚓ Kubernetes Services Overview
 - 🏠 ClusterIP Service
@@ -269,9 +268,6 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ---
 
 # 📅 Day 20 – Kubernetes Workloads
-
-## 📌 Topics Covered
-
 - ☸️ Kubernetes Workloads Overview  
 - 📦 DaemonSets  
 - 🏃 Jobs  
@@ -281,9 +277,6 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ---
 
 # 📅 Day 21 – Kubernetes Scheduling Deep Dive
-
-## 📌 Topics Covered
-
 - 🧩 Intro – Static Pods, Manual Scheduling, Labels & Annotations  
 - ⚙️ Kubernetes Scheduler – Flow & Role  
 - 🛡️ Pods & High Availability – Failures & Replicas  
@@ -305,9 +298,6 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ---
 
 # 📅 Day 22 – Kubernetes Taints & Tolerations
-
-## 📌 Topics Covered
-
 - 🚦 Introduction – Why taints & tolerations  
 - 🖥️ Basics – Nodes vs Pods  
 - 🛑 Default Taints – Control-plane protection  
@@ -331,9 +321,6 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ---
 
 # 📅 Day 23 – Kubernetes Node Affinity
-
-## 📌 Topics Covered
-
 - 📘 Introduction – What is Node Affinity  
 - 🧭 Types:
   - 🔒 Required (Hard rule)
@@ -350,9 +337,6 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ---
 
 # 📅 Day 24 – Kubernetes Resource Requests & Limits
-
-## 📌 Topics Covered
-
 - 📘 Introduction – Why requests & limits matter  
 - ⚙️ Basics – Requests vs Limits explained  
 - 🎯 Importance:
@@ -375,11 +359,7 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 ---
 
 # 📅 Day 25 – ConfigMaps & Secrets
-
-## 📌 Topics Covered
-
-### Introduction
-- 🔐 Importance of ConfigMaps and Secrets  
+- 🔐 Introduction – Importance of ConfigMaps and Secrets  
 
 ### ConfigMaps
 - 📘 Definition & key points  
@@ -400,24 +380,18 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
   - Environment variables
   - Mounted volumes  
 
-### ⚖️ ConfigMaps vs Secrets
-- 📊 Comparison table  
-
-### ✅ Best Practices
-- 🔐 Encryption at rest  
-- 👥 RBAC control  
-- 📂 Namespace isolation  
-- 🔄 Secret rotation  
-- 🚀 CI/CD integration  
-- 📝 Conclusion
-Secure, scalable, and maintainable applications  
+- ⚖️ ConfigMaps vs Secrets – Comparison table  
+- ✅ Best Practices:
+  - 🔐 Encryption at rest  
+  - 👥 RBAC control  
+  - 📂 Namespace isolation  
+  - 🔄 Secret rotation  
+  - 🚀 CI/CD integration  
+- 📝 Conclusion – Secure, scalable, maintainable applications  
 
 ---
 
 # 📅 Day 26 – Kubernetes Autoscaling (HPA)
-
-## 📌 Topics Covered
-
 - 📈 What is Autoscaling?  
 - 🔄 Horizontal Pod Autoscaler (HPA)  
 - 📊 HPA Metrics:
@@ -433,9 +407,6 @@ Secure, scalable, and maintainable applications
 ---
 
 # 📅 Day 27 – Vertical Pod Autoscaling (VPA)
-
-## 📌 Topics Covered
-
 - 📘 Overview of VPA  
 - ⚙️ How VPA Works:
   - 🧠 Recommender
@@ -453,5 +424,7 @@ Secure, scalable, and maintainable applications
 
 ---
 
+
 Happy Learning ☸️🚀
+
 
