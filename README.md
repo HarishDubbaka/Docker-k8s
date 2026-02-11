@@ -268,10 +268,190 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
-## 📅 Day 20 ☸️ Kubernetes Workloads
-- 📌 DaemonSets
-- 🏃 Jobs
-- ⏰ CronJobs
-- 📝 Summary
+# 📅 Day 20 – Kubernetes Workloads
+
+## 📌 Topics Covered
+
+- ☸️ Kubernetes Workloads Overview  
+- 📦 DaemonSets  
+- 🏃 Jobs  
+- ⏰ CronJobs  
+- 📝 Summary  
 
 ---
+
+# 📅 Day 21 – Kubernetes Scheduling Deep Dive
+
+## 📌 Topics Covered
+
+- 🧩 Intro – Static Pods, Manual Scheduling, Labels & Annotations  
+- ⚙️ Kubernetes Scheduler – Flow & Role  
+- 🛡️ Pods & High Availability – Failures & Replicas  
+- 🧪 Kind Cluster Setup – Multi-node environment  
+- 📌 Scheduler as Static Pod – Behavior when down  
+- 📄 Static Pods – Definition & Manifest configuration  
+- 🔍 Inspecting Static Pods – `/etc/kubernetes/manifests`  
+- 💥 Failure Simulation – Removing scheduler manifest  
+- ⏳ Pending Pods – Behavior without scheduler  
+- 🔄 Restoring Scheduler – Restart process  
+- 🎯 Manual Scheduling using `nodeName`  
+- 🏷️ Labels – Purpose & usage  
+- 🔎 Selectors – How they work  
+- ✅ Best Practices – Naming keys (env, version, app)  
+- ⚖️ Labels vs Annotations – Comparison  
+- 🗂️ Annotations – Metadata storage  
+- 📝 Summary – Key takeaways  
+
+---
+
+# 📅 Day 22 – Kubernetes Taints & Tolerations
+
+## 📌 Topics Covered
+
+- 🚦 Introduction – Why taints & tolerations  
+- 🖥️ Basics – Nodes vs Pods  
+- 🛑 Default Taints – Control-plane protection  
+- ⚡ Effects:
+  - `NoSchedule`
+  - `PreferNoSchedule`
+  - `NoExecute`
+- 🎯 Use Cases:
+  - 🔐 Critical workloads
+  - 🎮 GPU nodes
+  - 🏢 Multi-tenant clusters
+  - ❤️ Health-based isolation
+  - 📦 Reserved nodes
+- 🧪 Practical Example – Tainting a node  
+- 🔄 Pods – Without vs With tolerations  
+- 🔍 Verification – Pod placement commands  
+- ⚖️ Taints vs Node Labels/Affinity  
+- ⚠️ Risks – Unschedulable pods & complexity  
+- 📝 Conclusion – Benefits & exam relevance  
+
+---
+
+# 📅 Day 23 – Kubernetes Node Affinity
+
+## 📌 Topics Covered
+
+- 📘 Introduction – What is Node Affinity  
+- 🧭 Types:
+  - 🔒 Required (Hard rule)
+  - 🌿 Preferred (Soft rule)
+- 🎯 Why Use:
+  - 🚀 Performance optimization
+  - 📜 Compliance
+  - 📊 Resource management
+- 🧪 Required Example – Pod pending until node labeled  
+- 🧪 Preferred Example – Pod runs even without exact match  
+- ✅ Best Practices – Combine with taints, maintain clean labels  
+- 📝 Conclusion – Benefits & CKA relevance  
+
+---
+
+# 📅 Day 24 – Kubernetes Resource Requests & Limits
+
+## 📌 Topics Covered
+
+- 📘 Introduction – Why requests & limits matter  
+- ⚙️ Basics – Requests vs Limits explained  
+- 🎯 Importance:
+  - 🛡️ Stability
+  - 📍 Proper scheduling
+  - 💰 Cost control
+- 📄 Pod Manifest Example with requests/limits  
+- 💥 Exceeding Limits – `OOMKilled` scenario  
+- ⚠️ Common Mistakes:
+  - 📈 Over-provisioning
+  - 📉 Under-provisioning
+  - ❌ Ignoring requests  
+- ✅ Best Practices:
+  - 📦 ResourceQuotas
+  - 📊 Monitoring
+  - 🔄 HPA/VPA integration
+  - 🔁 Regular reviews  
+- 📝 Conclusion – Efficient, stable, cost-effective cluster  
+
+---
+
+# 📅 Day 25 – ConfigMaps & Secrets
+
+## 📌 Topics Covered
+
+### Introduction
+- 🔐 Importance of ConfigMaps and Secrets  
+
+### ConfigMaps
+- 📘 Definition & key points  
+- 🛠️ Creating ConfigMaps:
+  - From literals
+  - From YAML
+  - From files  
+- 🔌 Using ConfigMaps:
+  - Environment variables
+  - Mounted files  
+
+### Secrets
+- 🔒 Definition & key points  
+- 🛠️ Creating Secrets:
+  - CLI
+  - YAML  
+- 🔌 Using Secrets:
+  - Environment variables
+  - Mounted volumes  
+
+### ⚖️ ConfigMaps vs Secrets
+- 📊 Comparison table  
+
+### ✅ Best Practices
+- 🔐 Encryption at rest  
+- 👥 RBAC control  
+- 📂 Namespace isolation  
+- 🔄 Secret rotation  
+- 🚀 CI/CD integration  
+- 📝 Conclusion
+Secure, scalable, and maintainable applications  
+
+---
+
+# 📅 Day 26 – Kubernetes Autoscaling (HPA)
+
+## 📌 Topics Covered
+
+- 📈 What is Autoscaling?  
+- 🔄 Horizontal Pod Autoscaler (HPA)  
+- 📊 HPA Metrics:
+  - CPU
+  - Memory
+  - Custom metrics  
+- ⚙️ Setup HPA (Deployment + Service)  
+- 🧪 Generate Test Traffic  
+- 👀 Monitor Scaling Behavior  
+- ✅ Best Practices  
+- 📝 Conclusion  
+
+---
+
+# 📅 Day 27 – Vertical Pod Autoscaling (VPA)
+
+## 📌 Topics Covered
+
+- 📘 Overview of VPA  
+- ⚙️ How VPA Works:
+  - 🧠 Recommender
+  - 🔄 Updater
+  - 🛂 Admission Controller  
+- 🎯 When to Use VPA  
+- ⚠️ Key Limitations  
+- ✅ Best Practices  
+- 🛠️ Installing VPA Components  
+- 📄 Configure VPA for Workloads  
+- 🧪 Generate Test Traffic  
+- 👀 Monitor VPA Recommendations  
+- 📊 Monitoring Commands  
+- 📝 Summary  
+
+---
+
+Happy Learning ☸️🚀
+
