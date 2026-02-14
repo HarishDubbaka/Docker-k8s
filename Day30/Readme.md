@@ -64,11 +64,6 @@ Popular repositories include **Bitnami**, **Helm stable**, and **Helm incubator*
 - Renders templates, manages releases, and communicates with Kubernetes.  
 - Tracks deployment history for upgrades and rollbacks.  
 
-
-![Image](https://developer.ibm.com/developer/default/blogs/kubernetes-helm-3/images/helm3-arch.png)
-
-![Image](https://www.researchgate.net/publication/363933692/figure/fig3/AS%3A11431281087092686%401664459497019/Helm-client-connects-and-installs-the-helm-chart-to-the-Kubernetes-cluster-by-interacting.png)
-
 ![Image](https://cdn.prod.website-files.com/67f18e860e54dbf2b97a05c6/6828e94cc207ec8e35f83566_image-10.png)
 
 ![Image](https://glasskube.dev/assets/images/helm-workflow-diagram-73ec11046f99e2e990ce3cabc5b6105c.png)
