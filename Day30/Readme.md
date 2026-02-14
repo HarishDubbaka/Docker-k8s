@@ -66,8 +66,6 @@ Popular repositories include **Bitnami**, **Helm stable**, and **Helm incubator*
 
 ![Image](https://cdn.prod.website-files.com/67f18e860e54dbf2b97a05c6/6828e94cc207ec8e35f83566_image-10.png)
 
-![Image](https://glasskube.dev/assets/images/helm-workflow-diagram-73ec11046f99e2e990ce3cabc5b6105c.png)
-
 ---
 
 ## Installing Helm
@@ -145,6 +143,3 @@ helm uninstall laxmi-nginx
 
 Helm is the **go-to package manager for Kubernetes**, enabling faster, safer, and more consistent deployments. By leveraging charts, repositories, and release management, Helm integrates seamlessly into modern DevOps workflows and GitOps pipelines.
 
----
-
-Would you like me to extend this README-style document into a **step-by-step beginner’s guide with diagrams** (like a visual workflow of how Helm interacts with Kubernetes), so it’s more engaging for learners and recruiters?
