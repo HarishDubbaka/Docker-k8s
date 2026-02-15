@@ -1,7 +1,3 @@
-Here’s a polished **`README.md`** version of your Helm guide, formatted for clarity, step-by-step learning, and ready to use in a project:
-
----
-
 # Writing and Deploying Your Own Helm Chart
 
 Helm is a package manager for Kubernetes that simplifies deploying, managing, and upgrading applications. This guide walks you through creating a custom Helm chart, deploying it, and managing releases.
@@ -347,7 +343,5 @@ helm install myapp oci://registry-1.docker.io/<username>/laxmi --version 0.1.0
 * Upgrade and rollback releases
 * Publish charts to repositories
 
----
 
-Do you want me to also **include a sample diagram showing Helm chart structure** for this README? It makes it much easier to visualize for beginners.
 
