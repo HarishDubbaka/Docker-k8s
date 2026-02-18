@@ -64,45 +64,11 @@ Let's take a look at each concept.
 
 ---
 
-Deploy Application Using Kustomize
-Let’s see how Kustomize works using a real-world deployment scenario involving different environments.
+# 🚀 Deploy Application Using Kustomize
 
-Note: For demonstration purposes, we have given a simple YAML files with only two environments. In actual project, the YAML could be more complex with different objects and more deployment environemnts.
-Let's assume the following scenario.
+This guide demonstrates how **Kustomize** can be used to deploy an application across multiple environments, such as **dev** and **prod**.  
 
-Nginx web server needs to be deployed in the dev and prod
-In dev, we need only a deployment with 2 replicas, a Nodeport service, and less memory and CPU resources.
-In prod, we need a deployment with 4 replicas, different CPU and memory limits, a rolling update strategy, and a service without NodePort.
-Let's see how we can achieve this using Kustomize.
-
-Github Repo: All the manifest used in this guide are hosted in the Kustomize Github Repo.
-
-git clone https://github.com/techiescamp/kustomize.git
-
-Here is the directory structure for using Kustomize.
-
-├── kustomize
-  ├── base
-    │   ├── deployment.yaml
-    │   ├── service.yaml
-    │   ├── kustomization.yaml
-    └ overlays
-        ├── dev
-        │   ├── deployment-dev.yaml
-        |   ├── service-dev.yaml
-        │   └── kustomization.yaml
-        └── prod
-            ├── deployment-prod.yaml
-            ├── service-prod.yaml
-            └── kustomization.yaml
-			
-
-
-# Deploy Application Using Kustomize
-
-Let’s see how **Kustomize** works using a real-world deployment scenario involving different environments.
-
-> **Note:** For demonstration purposes, we are using simple YAML files with only two environments (dev and prod). In actual projects, the YAML could be more complex with different objects and more deployment environments.
+> **Note:** For simplicity, this example uses only two environments. In real-world projects, manifests may be more complex and involve multiple objects and additional environments.
 
 ---
 
@@ -110,49 +76,62 @@ Let’s see how **Kustomize** works using a real-world deployment scenario invol
 
 We need to deploy an **Nginx web server** in two environments:
 
-- **Dev**
-  - Deployment with 2 replicas
-  - NodePort service
+- **Dev Environment**
+  - Deployment with **2 replicas**
+  - **NodePort** service
   - Lower CPU and memory resources
 
-- **Prod**
-  - Deployment with 4 replicas
+- **Prod Environment**
+  - Deployment with **4 replicas**
   - Different CPU and memory limits
-  - Rolling update strategy
+  - **RollingUpdate** strategy
   - Service without NodePort
+
+Kustomize allows us to achieve this by using a **Base + Overlay + Patch** approach, avoiding duplication and keeping environment-specific configurations separate.
 
 ---
 
-## 📂 Repository
+## 📂 GitHub Repository
 
-All manifests used in this guide are hosted in the **Kustomize GitHub Repo**:
+All the manifests used in this guide are hosted in the **Kustomize GitHub Repo**:
 
 ```bash
 git clone https://github.com/techiescamp/kustomize.git
-```
+````
 
 ---
 
 ## 📁 Directory Structure
 
+After cloning, the project directory structure looks like this:
+
 ```
 ├── kustomize
-  ├── base
-  │   ├── deployment.yaml
-  │   ├── service.yaml
-  │   └── kustomization.yaml
-  └── overlays
-      ├── dev
-      │   ├── deployment-dev.yaml
-      │   ├── service-dev.yaml
-      │   └── kustomization.yaml
-      └── prod
-          ├── deployment-prod.yaml
-          ├── service-prod.yaml
-          └── kustomization.yaml
+│   ├── base
+│   │   ├── deployment.yaml
+│   │   ├── service.yaml
+│   │   └── kustomization.yaml
+│   └── overlays
+│       ├── dev
+│       │   ├── deployment-dev.yaml
+│       │   ├── service-dev.yaml
+│       │   └── kustomization.yaml
+│       └── prod
+│           ├── deployment-prod.yaml
+│           ├── service-prod.yaml
+│           └── kustomization.yaml
 ```
 
+* **base/** → Contains reusable manifests common to all environments
+* **overlays/dev/** → Dev-specific changes and patches
+* **overlays/prod/** → Production-specific changes and patches
+
 ---
+
+This setup allows Kustomize to build environment-specific manifests efficiently without duplicating the full YAML files.
+
+```
+```
 
 ## 🏗️ Base Folder
 
