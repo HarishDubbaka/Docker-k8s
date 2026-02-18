@@ -10,8 +10,11 @@ kubectl apply -k <directory>
 Kustomize allows you to manage and customize Kubernetes configurations in a clean, structured, and reusable way.
 
 kustomization.yamlfile
+
 Base and Overlays
+
 Transformers
+
 Patches
 
 Let's take a look at each concept.
