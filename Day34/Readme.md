@@ -118,6 +118,7 @@ After cloning, the project directory structure looks like this:
 │       ├── dev
 │       │   ├── deployment-dev.yaml
 │       │   ├── service-dev.yaml
+|       |   ├── index-dev.html
 │       │   └── kustomization.yaml
 │       └── prod
 │           ├── deployment-prod.yaml
@@ -211,10 +212,9 @@ Instead of modifying the base files directly, we apply **patches** using Kustomi
 overlays/dev/
 ├── deployment-dev.yaml
 ├── service-dev.yaml
+├── index-dev.html
 └── kustomization.yaml
 ```
-
----
 
 # 📦 Deployment Patch (deployment-dev.yaml)
 
@@ -270,6 +270,23 @@ spec:
 * Service type updated to `NodePort`
 
 ---
+
+# 📝 Dev HTML ConfigMap (index-dev.html)
+
+This file is used in the Dev overlay to generate a ConfigMap containing a simple HTML page for the Dev environment.
+
+```html
+<html>
+  <body>
+    <h1>Welcome to Dev Environment</h1>
+  </body>
+</html>
+```
+
+### ✅ What Changed?
+Added a Dev-specific welcome page
+
+Will be included in the ConfigMap index-html-configmap
 
 # ⚙️ Dev kustomization.yaml
 
