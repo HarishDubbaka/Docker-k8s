@@ -1,9 +1,13 @@
-Understanding Kustomize
+# 📘 Understanding Kustomize
 
-With Kustomize, you don’t need to apply each YAML file one by one. Instead, you list all your resource files inside a single kustomization.yaml, and then deploy them together using kubectl apply -k.
+With **Kustomize**, you don’t need to apply each YAML file individually.  
+Instead, you list all your resource files inside a single `kustomization.yaml` file and deploy them together using:
 
+```
+kubectl apply -k <directory>
+```
 
-First, you need to understand the following Key Kustomize concepts.
+Kustomize allows you to manage and customize Kubernetes configurations in a clean, structured, and reusable way.
 
 kustomization.yamlfile
 Base and Overlays
