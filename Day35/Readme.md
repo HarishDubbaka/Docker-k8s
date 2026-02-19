@@ -331,4 +331,4 @@ For new engineer (like sree):
 - **In AKS:** Add user to Azure AD group → bind RBAC.  
 
 Cloud Kubernetes shifts authentication responsibility to cloud IAM systems.
-```
+
