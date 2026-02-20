@@ -54,14 +54,6 @@ User ➝ Permissions ➝ Resources
 
 ![Image](https://miro.medium.com/1%2ANuQkJd-hactvC0j2OSmw5Q.png)
 
-![Image](https://miro.medium.com/1%2AZlQffqUWhkxqbKI--ZUitg.png)
-
-![Image](https://miro.medium.com/1%2AHfn62d4gyGgmbwOHOIZROw.png)
-
-![Image](https://miro.medium.com/1%2Ad3ypfOPzh-6dDSpFHidtAw.jpeg)
-
-![Image](https://stevenschwenke.de/images/kubernetes-icons-set-for-kubernetes-architecture-diagrams.png)
-
 * No explicit group name
 * Uses: `apiVersion: v1`
 * Includes foundational resources:
@@ -84,12 +76,6 @@ kind: Pod
 ## 🔸 Named API Groups
 
 ![Image](https://stevenschwenke.de/images/k8s-diagram-with-community-icons.png)
-
-![Image](https://miro.medium.com/0%2AT7C4hJigWVn4LlhK)
-
-![Image](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2Ad7TXtoe4gwq8Rx1BXydyxw.png)
-
-![Image](https://gitlab.eqipe.ch/uploads/-/system/project/avatar/141/cronjob-256.png)
 
 * Explicit group name
 * Format: `apiVersion: <group>/<version>`
