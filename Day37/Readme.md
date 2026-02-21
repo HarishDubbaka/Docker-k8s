@@ -332,7 +332,7 @@ curl -k https://172.18.0.5:6443/api/v1/namespaces \
 
 You can also test using Postman.
 
-![Image Alt](image_url)
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/2aaafe21246bb05434efbf6664ac17c1fcc7fbb5/Day37/postman.png)
 
 ---
 
