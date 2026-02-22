@@ -209,11 +209,6 @@ Architecture:
 
 Frontend → Backend → Database
 
-## Architecture Diagram
-
-![Image](https://miro.medium.com/1%2AZBUzOwaMkbfPD3iZXxVH1g.gif)
-
-
 ---
 
 ## Deployment File: `laxmi3tire.yml`
