@@ -213,11 +213,6 @@ Frontend → Backend → Database
 
 ![Image](https://miro.medium.com/1%2AZBUzOwaMkbfPD3iZXxVH1g.gif)
 
-![Image](https://sretips.com.br/images/kubernetes/kubernetes-frontend-backend.png)
-
-![Image](https://i.sstatic.net/Cwd7c.png)
-
-![Image](https://miro.medium.com/v2/resize%3Afit%3A1400/1%2A-ze224LkGbwRbgIC-7w5dg.jpeg)
 
 ---
 
