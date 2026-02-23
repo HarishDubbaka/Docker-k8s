@@ -39,42 +39,37 @@ Along with these, it helps install CLI tools such as:
 
 ![Cluster Setup Steps](https://github.com/user-attachments/assets/e0943ad5-2d13-4128-8147-1ef644c62955)
 
-> **Note:**  
-> - On Mac Silicon chips, **Multipass** is recommended since VirtualBox has compatibility issues.  
-> - Alternatively, you can spin up virtual machines on the cloud and use those.
+
+## 🖥️ Prerequisites for Azure VM Setup
+
+Before bootstrapping Kubernetes with Kubeadm, ensure the following:
+
+- **Operating System**: Ubuntu 22.04 LTS (Jammy) recommended
+- **Master Node**: 2 CPUs, 4 GB RAM minimum
+- **Worker Nodes**: 1 CPU, 2 GB RAM minimum
+- **Networking**:
+  - All nodes must be on the same virtual network
+  - Ensure DNS resolution between nodes
+- **Swap**: Disabled on all nodes
+- **Firewall / NSG Rules**:
+  - Allow inbound traffic on required Kubernetes ports:
+    - `6443/tcp` – Kubernetes API server
+    - `10250/tcp` – Kubelet API
+    - `10251/tcp` – kube-scheduler
+    - `10252/tcp` – kube-controller-manager
+    - `10255/tcp` – Read-only Kubelet API
+    - `30000–32767/tcp` – NodePort Services
 
 ---
 
-## 🔐 Network and Firewall Rules
+## 📋 Next Steps
 
-If you are using **Azure VMs**, you need to allow specific traffic on specific ports in your **Network Security Group (NSG)**:
-
-| Port | Protocol | Purpose |
-|------|----------|---------|
-| 6443 | TCP | Kubernetes API server |
-| 10250 | TCP | Kubelet API |
-| 10251 | TCP | kube-scheduler |
-| 10252 | TCP | kube-controller-manager |
-| 10255 | TCP | Read-only Kubelet API |
-| 30000–32767 | TCP | NodePort Services |
+1. Provision Azure VMs and configure networking.
+2. Install container runtime (`containerd`) on all nodes.
+3. Install Kubernetes tools (`kubeadm`, `kubelet`, `kubectl`).
+4. Initialize the master node with `kubeadm init`.
+5. Install a CNI plugin (e.g., Calico).
+6. Join worker nodes using the `kubeadm join` command.
+7. Verify cluster health with `kubectl get nodes`.
 
 ---
-
-## ✅ Next Steps
-
-1. Prepare all nodes (disable swap, configure kernel modules, sysctl).  
-2. Install container runtime (`containerd`).  
-3. Install Kubernetes tools (`kubeadm`, `kubelet`, `kubectl`).  
-4. Initialize the master node with `kubeadm init`.  
-5. Install a CNI plugin (e.g., Calico).  
-6. Join worker nodes using the `kubeadm join` command.  
-7. Verify cluster with `kubectl get nodes`.
-
----
-
-This README provides a structured overview and prerequisites for setting up a multi‑node Kubernetes cluster using **kubeadm** on Azure cloud VMs.
-```
-
----
-
-I can extend this README with **ready‑to‑run command blocks** for each step (kernel modules, containerd setup, kubeadm init, Calico install, worker join) so it becomes a complete hands‑on guide. Would you like me to expand it into a full step‑by‑step tutorial version?
