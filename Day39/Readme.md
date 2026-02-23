@@ -31,7 +31,7 @@ Along with these, it helps install CLI tools such as:
 
 ![Kubernetes Installation Options](https://github.com/user-attachments/assets/5391de53-36bc-4574-81cf-4b1fefbda9e3)
 
-> **Note:** In this demo, we will be installing Kubernetes on cloud VMs (self‑managed).
+> **Note:** In this demo, we will be installing Kubernetes on **Azure cloud VMs (self‑managed)**.
 
 ---
 
@@ -45,5 +45,36 @@ Along with these, it helps install CLI tools such as:
 
 ---
 
+## 🔐 Network and Firewall Rules
 
--
+If you are using **Azure VMs**, you need to allow specific traffic on specific ports in your **Network Security Group (NSG)**:
+
+| Port | Protocol | Purpose |
+|------|----------|---------|
+| 6443 | TCP | Kubernetes API server |
+| 10250 | TCP | Kubelet API |
+| 10251 | TCP | kube-scheduler |
+| 10252 | TCP | kube-controller-manager |
+| 10255 | TCP | Read-only Kubelet API |
+| 30000–32767 | TCP | NodePort Services |
+
+---
+
+## ✅ Next Steps
+
+1. Prepare all nodes (disable swap, configure kernel modules, sysctl).  
+2. Install container runtime (`containerd`).  
+3. Install Kubernetes tools (`kubeadm`, `kubelet`, `kubectl`).  
+4. Initialize the master node with `kubeadm init`.  
+5. Install a CNI plugin (e.g., Calico).  
+6. Join worker nodes using the `kubeadm join` command.  
+7. Verify cluster with `kubectl get nodes`.
+
+---
+
+This README provides a structured overview and prerequisites for setting up a multi‑node Kubernetes cluster using **kubeadm** on Azure cloud VMs.
+```
+
+---
+
+I can extend this README with **ready‑to‑run command blocks** for each step (kernel modules, containerd setup, kubeadm init, Calico install, worker join) so it becomes a complete hands‑on guide. Would you like me to expand it into a full step‑by‑step tutorial version?
