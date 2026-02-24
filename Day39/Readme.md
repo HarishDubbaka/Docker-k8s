@@ -408,5 +408,4 @@ Results:
 
 🎉 Your Kubernetes cluster on Azure VMs using kubeadm is now fully operational.
 
-```
 
