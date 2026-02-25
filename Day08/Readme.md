@@ -36,6 +36,7 @@ Image Layer: Base OS
 * ❌ Writable layer is removed
 * ✅ Image layers are reused
 
+only delta chages are saved to safe the size (which uses othrer layers from cache)
 ---
 
 ## 🧪 Let’s Do an Example
