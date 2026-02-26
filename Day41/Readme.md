@@ -438,9 +438,9 @@ Without CoreDNS:
 
 ---
 
-## 📌 One-Line Definition (Interview Ready)
+## 📌 One-Line Definition 
 
 > CoreDNS is the internal DNS server in Kubernetes that enables service discovery and name resolution for Pods and Services using DNS-based architecture.
 
- 📊 Production architecture explanation
+
 
