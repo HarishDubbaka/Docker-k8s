@@ -131,9 +131,6 @@ CoreDNS allows communication using **names instead of IP addresses**.
 
 ![Image](https://miro.medium.com/1%2AqOeIh0U8exjjYyjkZorEBA.png)
 
-![Image](https://livewyer.io/blog/coredns-a-quick-overview-of-its-features-and-benefits/100029-1_hu_92cf5666406b7ace.png)
-
-![Image](https://imgix.datadoghq.com/img/blog/coredns-metrics/authoritative-dns-diagram.png?auto=compress%2Cformat\&cs=origin\&dpr=1\&fit=max\&h=\&lossless=true\&q=75\&w=)
 
 ### DNS Flow Inside Cluster
 
