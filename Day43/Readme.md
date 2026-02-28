@@ -94,11 +94,11 @@ The **Ingress Controller** does the actual routing by reading rules from Ingress
 
 * **Without Ingress:** Each service uses NodePort or LoadBalancer.
 
-*Insert image: `without-ingress.png`*
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/e5abe19035cc24c45f672833802a4f0a035b012c/Day43/withoutingress.png).
 
 * **With Ingress:** Reverse proxy layer (Ingress Controller) routes traffic to services.
 
-*Insert image: `with-ingress-controller.png`*
+![Image Alt](https://github.com/HarishDubbaka/Docker-k8s/blob/e5abe19035cc24c45f672833802a4f0a035b012c/Day43/withingress%20controller.png).
 
 ---
 
