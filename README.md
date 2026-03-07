@@ -686,6 +686,390 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
+
+
+## 📅 Day 39 – Kubernetes Cluster Setup with Kubeadm
+
+- 📘 What is Kubeadm?  
+- ⚙️ Control Plane Components Installed by Kubeadm  
+- 🔧 Ways to Install Kubernetes  
+- 🏛 Cluster Architecture on Azure  
+- 💻 Creating Virtual Machines in Azure  
+  - Step 1: Login to Azure Portal  
+  - Step 2: Create a Resource Group  
+  - Step 3: Create Virtual Network (VNet)  
+  - Step 4: Create Master Node VM  
+  - Step 5: Create Worker Nodes  
+  - Step 6: Open Required Ports  
+  - Step 7: Note Down Public IPs  
+- 🖥 Master Node Setup  
+  - Disable Swap  
+  - Enable Kernel Modules  
+  - Configure Sysctl  
+  - Install Container Runtime (containerd)  
+  - Install runc  
+  - Install CNI Plugins  
+  - Install Kubernetes Binaries  
+  - Configure crictl  
+  - Initialize Control Plane  
+  - Configure kubeconfig  
+  - Install Calico CNI  
+- 🖥 Worker Node Setup  
+- 🔗 Join Worker Nodes to Cluster  
+- ✅ Verify Cluster  
+- 🧪 Test with NGINX  
+- 🔄 Scaling the Deployment  
+- 📝 Cluster Validation Checklist  
+
+---
+
+## 📅 Day 40 – Kubernetes Storage Provisioning with Storage Classes
+
+- 💾 Understanding Ephemeral Storage (emptyDir)  
+- 🔄 Pod Lifecycle vs Container Lifecycle  
+- 📘 Introduction to Storage Classes  
+- 🗂 Kubernetes Storage Components  
+  - Persistent Volume (PV)  
+  - Persistent Volume Claim (PVC)  
+  - Storage Class (SC)  
+- ⚙️ Access Modes  
+- 📝 Example PVC  
+- 📦 Sample PV and PVC  
+- 🔄 Reclaim Policy  
+- 🛠 Troubleshooting PVC  
+- ⚠️ Safe Storage Reset  
+- 🎯 Final Takeaways  
+
+---
+
+## 📅 Day 41 – What is DNS
+
+- 📘 What is DNS?  
+- 💻 Practical Commands  
+- 🏛 Domain Name Hierarchy  
+- 🌐 Types of DNS Servers  
+- 📝 DNS Record Types  
+- ✅ Quick Troubleshooting Checklist  
+- ⚡ CoreDNS in Kubernetes  
+  - What is CoreDNS?  
+  - Why CoreDNS is Needed  
+  - CoreDNS Architecture  
+  - Practical Example  
+  - CoreDNS Service & Pod Configuration  
+  - CoreDNS ConfigMap & Plugins  
+  - Troubleshooting CoreDNS  
+- 🗝 Key Concepts  
+- 📝 Final Summary  
+- 🔹 One-Line Definition  
+
+---
+
+## 📅 Day 42 – Kubernetes Networking Overview
+
+- 📘 Kubernetes Network Model  
+- ⚙️ How a Pod Gets an IP Address  
+- 🗝 Key Networking Concepts  
+- 🌐 Popular CNI Plugins  
+- 🔧 How CNI Works  
+- 🔄 Multi-Container Pods  
+- 🖥 Inspecting Network Namespaces & veth Pairs  
+- ✅ Verifying CNI Functionality  
+- 🛠 Troubleshooting Tips  
+- 📝 Example: Network Namespaces & Pause Containers  
+
+---
+
+## 📅 Day 43 – Kubernetes Ingress Guide
+
+- ❓ Why Ingress Matters  
+- 📘 Kubernetes Ingress Overview  
+- ⏳ Before Kubernetes Ingress  
+- 🔄 How Kubernetes Ingress Works  
+- 🏛 Common Kubernetes Ingress Controllers  
+- ⬇️ Deploying Nginx Ingress Controller  
+- 📝 Creating an Ingress Resource  
+- 🔗 Accessing Services via Ingress  
+- ✅ Ingress Advantages Summary  
+
+---
+
+## 📅 Day 44 – Kubernetes Ingress vs Gateway API
+
+- 📘 Introduction  
+  - Overview of Kubernetes traffic management  
+  - Ingress vs Gateway API  
+- 🏛 Kubernetes Ingress  
+  - What is Ingress  
+  - Routing rules  
+  - Ingress Controller  
+  - Limitations of Ingress  
+- 🌐 Kubernetes Gateway API  
+  - Introduction to Gateway API  
+  - Key Gateway API Resources:  
+    - `GatewayClass`  
+    - `Gateway`  
+    - `HTTPRoute`  
+    - `TCPRoute`  
+    - `TLSRoute`  
+    - `ReferenceGrant`  
+  - Advantages Over Ingress  
+- ⚖️ Comparison Table  
+  - Feature comparison: Ingress vs Gateway API  
+- 🔹 TL;DR  
+  - When to use Ingress  
+  - When to use Gateway API  
+- 📘 Detailed Gateway API Overview  
+  - Key Features  
+  - Gateway API Controller  
+  - Popular Gateway API Controllers  
+- 🏗 NGINX Gateway Fabric  
+  - Control Plane Controller  
+  - Data Planes  
+  - Complete Gateway API Traffic Flow  
+- 🛠 Setup Prerequisites  
+  - Required Kubernetes version  
+  - Helm & Kubectl  
+  - Gateway API Controller installation  
+- ✅ Summary  
+  - Benefits of Gateway API  
+  - Recommendations for modern Kubernetes networking  
+- 🔮 Next Steps  
+  - Custom Gateway API configuration  
+
+---
+
+## 📅 Day 45 – Migrate Ingress to Gateway API
+
+- 📘 Introduction  
+  - Why migrate from Ingress to Gateway API  
+  - NGINX Ingress Controller retirement (March 2026)  
+- 🏛 Kubernetes Ingress  
+  - Purpose and basic routing  
+  - Limitations of Ingress  
+- 🌐 Kubernetes Gateway API  
+  - Modern replacement for Ingress  
+  - Core components comparison (Ingress → Gateway API)  
+  - Key components (`GatewayClass`, `Gateway`, `HTTPRoute`)  
+- ⚙️ Prerequisites  
+  - Helm, Kubectl, Kubernetes versions  
+  - Kubeconfig access  
+- 🛠 Step 1: Deploy Sample Web Application  
+  - Create Namespace  
+  - Deployment and Service  
+  - ConfigMap with HTML content  
+- 🛠 Step 2: Create TLS Secret  
+  - Generate self-signed certificate  
+  - Create Kubernetes TLS Secret  
+- 🛠 Step 3: Install Ingress Controller  
+  - Helm installation  
+  - Verify deployment  
+- 🛠 Step 4: Create Ingress Resource  
+  - YAML configuration  
+  - Apply and verify  
+  - Test Ingress  
+- 🛠 Step 5: Inspect Existing Ingress  
+  - `kubectl get ingress` review  
+- 🛠 Step 6: Install Gateway API CRDs  
+  - Apply standard CRDs  
+  - Verification  
+- 🛠 Step 7: Install NGINX Gateway Fabric  
+  - Deploy CRDs  
+  - Deploy Gateway Controller  
+  - Patch NodePorts  
+  - Verify deployment  
+- 🛠 Step 8: Create GatewayClass  
+  - YAML definition  
+  - Verification  
+- 🛠 Step 9: Create Gateway Resource  
+  - Define HTTP and HTTPS listeners  
+  - TLS termination  
+  - Verification  
+- 🛠 Step 10: Create HTTPRoute  
+  - HTTP routing rules  
+  - HTTPS routing rules  
+  - Verification  
+- 🛠 Step 11: Verify Gateway Configuration  
+  - Describe Gateway and HTTPRoute  
+  - Check Accepted condition  
+  - ReferenceGrant for cross-namespace TLS  
+- 🛠 Step 12: Test Gateway API  
+  - HTTP and HTTPS testing using NodePort  
+  - Host header verification  
+- 🛠 Step 13: Remove Old Ingress  
+  - Delete legacy Ingress resource  
+- 🔑 Key Differences  
+  - Ingress vs Gateway API routing  
+  - Benefits of explicit listeners and HTTPRoute separation  
+- 🏗 Lab Environment Used  
+  - Multi-node playground setup  
+- ✅ Conclusion  
+  - Benefits of migrating to Gateway API  
+  - Future-proof Kubernetes networking  
+
+---
+
+## 📅 Day 46 – Kubernetes CRDs & Controllers
+
+- 📘 Introduction to CRDs  
+  - What are Custom Resource Definitions (CRDs)  
+  - Why CRDs are useful  
+- ⚙️ Understanding CRDs  
+  - Definition of a CRD  
+  - How CRDs extend the Kubernetes API  
+  - Controllers: why CRDs alone are not enough  
+- ⚖️ CRDs vs Native Kubernetes API  
+  - Comparison table: API vs CRDs  
+  - Flexibility and use cases  
+- 🛠 Creating a Kubernetes CRD  
+  - Define the CRD YAML  
+  - Apply the CRD  
+  - Verify registration  
+- 🛠 Creating a Custom Resource (CR)  
+  - Define CR YAML  
+  - Apply and verify  
+  - Inspect CR instances  
+- ⚙️ Building and Running a Sample Controller  
+  - Purpose of the controller  
+  - Setting up Go environment  
+  - Building and running the sample-controller  
+  - How the controller reconciles CRs into Deployments  
+- ⚖️ CRDs vs Deployments  
+  - How CRD + CR differs from actual resource creation  
+  - Importance of the controller  
+- ✅ Key Takeaways  
+  - Summary of CRD, CR, and controller roles  
+  - Reconciliation rule  
+- 🧹 Clean Up  
+  - Delete CR  
+  - Delete CRD  
+
+---
+
+## 📅 Day 47 – Kubernetes Operators
+
+- 📘 Introduction  
+  - What are Kubernetes Operators  
+  - Automation in Kubernetes  
+  - Operator concept overview  
+- ⚙️ Why Kubernetes Needs Operators  
+  - Limitations of native Kubernetes  
+  - Automation of cluster operations  
+  - Desired vs actual state reconciliation  
+- 🏛 What is a Kubernetes Operator  
+  - Day-1 and Day-2 operations  
+  - Integration with Kubernetes APIs  
+  - Continuous control loop  
+- 🔄 How Operators Work  
+  - Custom Resource Definitions (CRDs)  
+  - Custom Resources (CRs)  
+  - Operator controller workflow  
+  - Reconciliation process  
+- 🎯 Purpose and Function  
+  - Declarative model  
+  - Automated system administration  
+  - Ensuring cluster matches desired state  
+- 🛠 Common Tasks Automated by Operators  
+  - Application deployment  
+  - Scaling workloads  
+  - Backup and restore  
+  - Configuration management  
+  - Rolling upgrades and failover  
+- 🏛 Kubernetes Operator Examples  
+  - Artifact Hub  
+  - Operator Hub  
+- 📘 Example: Prometheus Operator  
+  - Overview and features  
+  - kube-prometheus stack  
+  - End-to-end monitoring for Kubernetes  
+- ⚙️ Install Operator Lifecycle Manager (OLM)  
+  - Purpose of OLM  
+  - Installation commands  
+  - Verification of OLM components  
+- ⚙️ Install Prometheus Operator  
+  - Apply Prometheus operator YAML  
+  - Verify installation (`csv` and pods)  
+  - Verify installed CRDs  
+- 🛠 Step 1: Create a Prometheus Custom Resource  
+  - YAML definition  
+  - Apply CR and verify deployment  
+- 🛠 Step 2: Deploy a Sample Application  
+  - Deployment YAML  
+  - Service YAML  
+  - Apply and verify pods  
+- 🛠 Step 3: Create ServiceMonitor  
+  - Define ServiceMonitor for Prometheus scraping  
+  - Apply and verify  
+- 🛠 Step 4: Access Prometheus UI  
+  - Port-forward commands  
+  - Check metrics and targets  
+- 🛠 Step 5: Query Metrics  
+  - Sample PromQL queries  
+  - Filtering pod statuses  
+- 🛠 Step 6: Create Alert Rule  
+  - Define PrometheusRule YAML  
+  - Apply and verify alert rules  
+- 🛠 Step 7: Install Alertmanager (Optional)  
+  - Configure alert destinations (Slack, Email, etc.)  
+  - Alert flow overview  
+- 🏗 Final Architecture  
+  - Application Pod → Service → ServiceMonitor → Prometheus Operator → Prometheus → Alert Rules → Alertmanager  
+
+---
+
+## 📅 Day 48 – Kubernetes Admission Controllers
+
+- 📘 Introduction  
+  - Why Admission Controllers are needed  
+  - Overview of request flow in Kubernetes  
+- ⚙️ What Are Kubernetes Admission Controllers  
+  - Definition  
+  - How they intercept API requests  
+  - Role in maintaining cluster integrity  
+- 🛠 Types of Admission Controllers  
+  - **Mutating Admission Controllers**  
+    - Modify requests before storage  
+    - Example: MutatingAdmissionWebhook  
+    - Use cases: sidecar injection, resource defaults, labels  
+  - **Validating Admission Controllers**  
+    - Validate requests and allow/reject  
+    - Example: ValidatingAdmissionWebhook  
+    - Use cases: untrusted images, required labels, security policies  
+- ✅ Why Use Admission Controllers  
+  - Security enforcement  
+  - Automatic mutation  
+  - Custom validation  
+  - Cost management  
+- 🔧 Kubernetes Cluster Setup  
+  - Verify nodes  
+  - Verify system pods  
+- 🔍 Checking Enabled Admission Controllers  
+  - Method 1: Check API Server Pod  
+  - Method 2: Check API Server Manifest  
+- 📝 Namespace Creation Test  
+  - Attempting pod creation in non-existent namespace  
+  - Default namespace behavior  
+- ⚙️ Enabling NamespaceAutoProvision Admission Controller  
+  - Step 1: Backup API server manifest  
+  - Step 2: Edit API server manifest  
+  - Step 3: Restart API server  
+  - Step 4: Test automatic namespace creation  
+- 🛠 Built-in Admission Controllers Examples  
+  - **ResourceQuota** (Validating Controller)  
+    - Define quotas for CPU, memory, pods  
+    - Reject pods exceeding quota  
+  - **LimitRanger** (Mutating Controller)  
+    - Automatically inject default CPU/memory limits  
+    - Verify injected resources in pods  
+- ✅ Learning Outcomes  
+  - Understanding Admission Controllers  
+  - Difference between mutating vs validating  
+  - How to check and enable plugins  
+  - Practical usage with ResourceQuota and LimitRanger  
+- 🏗 Lab Environment  
+  - Public playground URL for hands-on practice
+
+---
+
 Happy Learning ☸️🚀
 
 
