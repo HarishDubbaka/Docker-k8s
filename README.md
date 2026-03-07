@@ -423,7 +423,268 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 - 📝 Summary  
 
 ---
+  
+## 📅 Day 28 – Kubernetes Cluster Autoscaling
 
+- 📘 Overview of Cluster Autoscaling  
+- ⚙️ What Is Cluster Autoscaler?  
+- 🔄 How Cluster Autoscaler Works  
+  - 1️⃣ Scale-Up Flow  
+  - 2️⃣ Scale-Down Flow  
+- 📊 Key Features  
+- ⚖️ Autoscaler Types Comparison  
+- ✅ Summary  
+- ☁️ Kubernetes in Different Cloud Providers  
+- 🔧 Cluster Autoscaler in Different Clouds  
+  - Azure (AKS)  
+  - Google Cloud (GKE)  
+  - AWS (EKS)  
+- 🔀 Cluster Autoscaler vs HPA  
+- 📝 Best Practices  
+- ⚠️ Challenges and Considerations  
+- 📝 Conclusion  
+- 🎯 Final Takeaway  
+
+---
+
+## 📅 Day 29 – Kubernetes Health Checks and Probes
+
+- 📘 Kubernetes Health Checks and Probes Overview  
+- 👀 How to Check Health in Kubernetes  
+- ⚙️ What Is a Kubernetes Health Check (Probe)?  
+- 🧪 Types of Kubernetes Probes  
+  - 1️⃣ Liveness Probe  
+  - 2️⃣ Readiness Probe  
+  - 3️⃣ Startup Probe  
+- 🛠 Probe Action Types  
+  - Command (exec)  
+  - HTTP (httpGet)  
+  - TCP (tcpSocket)  
+  - gRPC  
+- ⏱ Probe Timing Options  
+- 📝 Examples  
+  - Example 1: Liveness Probe (Exec Command)  
+  - Example 2: Readiness Probe (HTTP)  
+  - Example 3: Startup Probe (TCP Socket)  
+- 🔄 Liveness vs Readiness  
+- 🧰 Debugging Tips & Best Practices  
+- ✅ Final Recommendation  
+- 💚 Healthy Probes = Healthy Cluster  
+
+---
+
+## 📅 Day 30 – Helm – Kubernetes Package Manager
+
+- 📘 Introduction to Helm – Kubernetes Package Manager  
+- ❓ Why Use Helm?  
+- ⚙️ How Helm Works  
+- 🗂 Helm Chart Structure  
+- 🌐 Helm Chart Repositories  
+- 🏛 Helm Architecture  
+  - 6.1 Helm Client  
+  - 6.2 Helm Library  
+- ⚡ Installing Helm  
+  - 7.1 Verify Installation  
+- 🛠 Configuring Helm  
+  - 8.1 Add a Repository  
+  - 8.2 Update Repositories  
+  - 8.3 Search for Charts  
+- ⬇️ Installing a Chart  
+- 🔄 Managing Releases  
+  - 10.1 List Active Releases  
+  - 10.2 Check Release Status  
+  - 10.3 Uninstall a Release  
+- 📝 Summary  
+
+---
+
+## 📅 Day 31 – Helm – Writing and Deploying Your Own Helm Chart
+
+- 📦 Create a Helm Chart  
+- ✏️ Modify `values.yaml`  
+- ⚙️ Customize Templates  
+  - Deployment  
+  - Service  
+- 📦 Package the Helm Chart  
+- ⬇️ Install the Chart  
+- 👀 Verify Deployment  
+- 🔧 Customizing Helm Releases  
+  - Using `--set` Flag  
+  - Using a Custom Values File  
+- 🔄 Upgrade and Rollback  
+- ❌ Uninstall Helm Release  
+- 📤 Publish Chart to Repository  
+  - Option 1 — GitHub Pages  
+  - Option 2 — OCI Registry (Modern)  
+
+---
+
+## 📅 Day 32 – Helm Cheat Sheet
+
+- 📘 Helm Overview  
+- 🗂 Chart Structure  
+- 📄 Key Files  
+- 💻 Common Commands  
+- 🔄 Install / Upgrade / Rollback Flow  
+- 📊 Values Override Hierarchy  
+- 📝 Tips & Best Practices  
+
+---
+
+## 📅 Day 33 – Managing Kubernetes Configurations with Kustomize
+
+- 📘 Managing Kubernetes Configurations with Kustomize  
+- ✅ Key Takeaways  
+- ⚙️ What Is Kustomize?  
+- ✨ Kustomize Features  
+- ⚡ Install Kustomize  
+  - Option 1: Use Built-in Kubectl Kustomize  
+  - Option 2: Install Standalone Kustomize  
+- ⚖️ Helm vs Kustomize  
+- ❓ When to Use What?  
+- 📁 Example Project Structure  
+- 📝 Conclusion  
+
+---
+
+## 📅 Day 34 – Understanding Kustomize
+
+- 📘 Understanding Kustomize  
+- 🗝 Key Concepts in Kustomize  
+  - `kustomization.yaml`  
+  - Base and Overlays  
+  - Transformers  
+  - Patches  
+- 🚀 Deploy Application Using Kustomize  
+  - Scenario  
+  - GitHub Repository  
+  - Directory Structure  
+- ⚙️ Base Configuration  
+  - `deployment.yaml`  
+  - `service.yaml`  
+  - `kustomization.yaml`  
+- 🛠 Dev Overlay Configuration  
+  - Dev Overlay Structure  
+  - Deployment Patch (`deployment-dev.yaml`)  
+  - Service Patch (`service-dev.yaml`)  
+  - Dev HTML ConfigMap (`index-dev.html`)  
+  - Dev `kustomization.yaml`  
+  - Review the Rendered Output  
+  - Deploy the Dev Environment  
+- 🛠 Prod Overlay Configuration  
+  - Prod Overlay Structure  
+  - Deployment Patch (`deployment-prod.yaml`)  
+  - Service Patch (`service-prod.yaml`)  
+  - Prod `kustomization.yaml`  
+  - Review the Rendered Output  
+  - Deploy the Prod Environment  
+- ✅ Verify Deployment  
+- 💡 Benefits of Using Kustomize  
+  - Simplified Configuration Management  
+  - Reusability  
+  - Version Control Friendly  
+  - Template-Free  
+  - Native `kubectl` Support  
+  - Built-in Transformers  
+  - Standalone CLI Tool  
+  - Declarative Configuration Updates  
+- 📝 Kustomize Best Practices  
+  - Separate Base and Overlays  
+  - Follow Kubernetes Best Practices  
+  - Keep Common Values in the Base  
+  - Format Files Before Committing  
+  - Validate Before Deployment  
+  - Integrate with CI/CD  
+  - Use the `edit` Subcommand  
+- 📝 Final Summary  
+
+---
+
+## 📅 Day 35 – Kubernetes Authentication & User Certificate Creation (kind Cluster)
+
+- 🔐 Authentication vs Authorization  
+- ⚙️ How Authentication Works in Kubernetes  
+- 🧩 Authentication Methods  
+- 🛡 Authorization Methods  
+- 📝 kind Cluster Notes  
+- 👤 Scenario: New User (`sree`)  
+- 📝 Step-by-Step User Certificate Creation  
+- ⚠️ Important Security Rules  
+- ✅ Summary (kind Cluster)  
+- ☁️ Cloud Kubernetes Considerations  
+- 🔐 Cloud-Specific Authentication  
+- 📝 CSR Use Cases in Cloud Kubernetes  
+- ⚖️ Summary Comparison  
+- 🎯 Recommendations for Users  
+
+---
+
+## 📅 Day 36 – Kubernetes RBAC
+
+- 🔐 Scenario  
+- 📘 What is RBAC?  
+- 🗂 Kubernetes API Groups  
+  - Core API Group (v1)  
+  - Named API Groups  
+  - Quick Comparison  
+- 🏛 The Three Pillars of RBAC  
+- 1️⃣ Step 1: Create a Role (Namespace Level)  
+- 2️⃣ Step 2: Create RoleBinding  
+- 🌐 Namespace vs Cluster Scope  
+- 🏢 ClusterRole & ClusterRoleBinding  
+- ⚙️ Configure kubeconfig for User  
+  - Verify Certificate Files  
+  - Add Credentials  
+  - Create and Switch Context  
+- ✅ Final Validation  
+- 🛠 Common Issues Checklist  
+- 📂 kubeconfig Location  
+- 📝 Final Summary  
+- 🎯 Key Takeaway  
+
+---
+
+## 📅 Day 37 – Kubernetes Service Accounts & API Access Guide
+
+- 👤 Humans vs Agents  
+- 🔐 What is a Service Account in Kubernetes  
+- ⚙️ How a Service Account Works  
+- 🛠 Step-by-Step: Setup Service Account & API Access  
+  - Step 1: Create a Service Account  
+  - Step 2: Create Namespace  
+  - Step 3: Create a ClusterRole  
+  - Step 4: Create ClusterRoleBinding  
+  - Step 5: Validate Access Using kubectl  
+  - Step 6: Create Long-Lived Token (Manual Secret)  
+  - Step 7: Get API Server Endpoint  
+  - Step 8: Validate Access Using CURL  
+- 🔐 Authentication vs Authorization  
+- ✅ Key Takeaways  
+- 📝 Summary  
+
+---
+
+## 📅 Day 38 – Kubernetes Networking & NetworkPolicy – Hands-On Guide (Kind Cluster)
+
+- 📘 Kubernetes Networking Basics  
+- 🖥 Example Environment – Kind Cluster  
+- ⚙️ What Happens When a Kind Cluster is Created  
+- ⚠️ Why This Can Be a Problem  
+- 🔄 Simple Analogy  
+- ❌ Creating a Cluster WITHOUT Default CNI  
+- 🚨 Problem: Nodes Show `NotReady`  
+- 🛠 Common Reasons for NotReady Nodes  
+- ⚡ Installing a Network Policy Provider  
+- 🏛 3-Tier Architecture Example  
+- 🧪 Testing Communication (Before NetworkPolicy)  
+- 📝 Creating NetworkPolicy  
+- 🧪 Testing After NetworkPolicy  
+- 🔀 Ingress vs Egress  
+- 🔌 Port Forwarding  
+- ✅ Summary  
+- 🎯 Final Takeaway  
+
+---
 
 Happy Learning ☸️🚀
 
