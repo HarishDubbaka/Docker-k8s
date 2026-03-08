@@ -334,8 +334,8 @@ Upgrade kubelet and kubectl
 Note:On Linux nodes, the kubelet defaults to supporting only cgroups v2. For Kubernetes 1.35 the FailCgroupV1 kubelet configuration option is set to true by default.
 
 To learn more, Official documentation reference:
-
 https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/upgrading-linux-nodes/
+
 Check versions:
 
 ```bash
@@ -406,7 +406,7 @@ worker1   Ready    <none>          90m   v1.29.15
 worker2   Ready    <none>          90m   v1.29.15
 
 ```
-# Kubernetes Upgrade Order – Easy Memory Trick
+# Kubernetes Upgrade Order 
 
 When upgrading a Kubernetes cluster using **kubeadm**, the order of upgrading components is very important.
 
@@ -416,8 +416,6 @@ Correct upgrade order:
 2. kubeadm upgrade (apply / node)  
 3. kubelet  
 4. kubectl  
-
----
 
 # Simple Memory Trick
 
