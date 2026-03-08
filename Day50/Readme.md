@@ -406,6 +406,7 @@ worker1   Ready    <none>          90m   v1.29.15
 worker2   Ready    <none>          90m   v1.29.15
 
 ```
+---
 # Kubernetes Upgrade Order 
 
 When upgrading a Kubernetes cluster using **kubeadm**, the order of upgrading components is very important.
