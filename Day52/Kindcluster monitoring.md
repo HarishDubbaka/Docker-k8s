@@ -126,6 +126,52 @@ Example output:
 
 ---
 
+Check  All Services
+
+```bash
+$ kubectl get all -n monitoring
+NAME                                                         READY   STATUS    RESTARTS        AGE
+pod/alertmanager-monitoring-kube-prometheus-alertmanager-0   2/2     Running   0               4h21m
+pod/monitoring-grafana-544b666bdf-dgss2                      3/3     Running   0               4h22m
+pod/monitoring-kube-prometheus-operator-c946f467d-w2kpb      1/1     Running   11 (40m ago)    4h22m
+pod/monitoring-kube-state-metrics-57f5f46ddb-5v869           1/1     Running   7 (2m17s ago)   4h22m
+pod/monitoring-prometheus-node-exporter-2nmwp                1/1     Running   8               4h22m
+pod/monitoring-prometheus-node-exporter-5pf8f                1/1     Running   2               4h22m
+pod/monitoring-prometheus-node-exporter-fq8pz                1/1     Running   1 (72m ago)     4h22m
+pod/prometheus-monitoring-kube-prometheus-prometheus-0       2/2     Running   0               4h21m
+
+NAME                                              TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+service/alertmanager-operated                     ClusterIP   None            <none>        9093/TCP,9094/TCP,9094/UDP   4h21m
+service/monitoring-grafana                        NodePort    10.96.19.233    <none>        3000:31807/TCP               4h22m
+service/monitoring-kube-prometheus-alertmanager   ClusterIP   10.96.112.250   <none>        9093/TCP,8080/TCP            4h22m
+service/monitoring-kube-prometheus-operator       ClusterIP   10.96.84.71     <none>        443/TCP                      4h22m
+service/monitoring-kube-prometheus-prometheus     ClusterIP   10.96.15.126    <none>        9090/TCP,8080/TCP            4h22m
+service/monitoring-kube-state-metrics             ClusterIP   10.96.190.152   <none>        8080/TCP                     4h22m
+service/monitoring-prometheus-node-exporter       ClusterIP   10.96.229.71    <none>        9100/TCP                     4h22m
+service/prometheus-operated                       ClusterIP   None            <none>        9090/TCP                     4h21m
+
+NAME                                                 DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
+daemonset.apps/monitoring-prometheus-node-exporter   3         3         3       3            3           kubernetes.io/os=linux   4h22m
+
+NAME                                                  READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/monitoring-grafana                    1/1     1            1           4h22m
+deployment.apps/monitoring-kube-prometheus-operator   1/1     1            1           4h22m
+deployment.apps/monitoring-kube-state-metrics         1/1     1            1           4h22m
+
+NAME                                                            DESIRED   CURRENT   READY   AGE
+replicaset.apps/monitoring-grafana-544b666bdf                   1         1         1       4h22m
+replicaset.apps/monitoring-kube-prometheus-operator-c946f467d   1         1         1       4h22m
+replicaset.apps/monitoring-kube-state-metrics-57f5f46ddb        1         1         1       4h22m
+
+NAME                                                                    READY   AGE
+statefulset.apps/alertmanager-monitoring-kube-prometheus-alertmanager   1/1     4h22m
+statefulset.apps/prometheus-monitoring-kube-prometheus-prometheus       1/1     4h21m
+
+Dubbakas@Dubbakas MINGW64 /d/Docker & k8s 2026
+$
+
+```
+
 ## 3️⃣ Port-Forward Services Locally
 
 ### Prometheus
