@@ -74,6 +74,18 @@ Check pods:
 
 ```bash
 kubectl get pods -n monitoring
+
+$ kubectl get pods -n monitoring
+NAME                                                     READY   STATUS    RESTARTS       AGE
+alertmanager-monitoring-kube-prometheus-alertmanager-0   2/2     Running   0              4h21m
+monitoring-grafana-544b666bdf-dgss2                      3/3     Running   0              4h21m
+monitoring-kube-prometheus-operator-c946f467d-w2kpb      1/1     Running   11 (39m ago)   4h21m
+monitoring-kube-state-metrics-57f5f46ddb-5v869           1/1     Running   7 (81s ago)    4h21m
+monitoring-prometheus-node-exporter-2nmwp                1/1     Running   8              4h21m
+monitoring-prometheus-node-exporter-5pf8f                1/1     Running   2              4h21m
+monitoring-prometheus-node-exporter-fq8pz                1/1     Running   1 (71m ago)    4h21m
+prometheus-monitoring-kube-prometheus-prometheus-0       2/2     Running   0              4h20m
+
 ```
 
 You should see components like:
@@ -88,6 +100,20 @@ Check services:
 
 ```bash
 kubectl get svc -n monitoring
+
+
+Dubbakas@Dubbakas MINGW64 /d/Docker & k8s 2026/moni+log
+$ kubectl get svc -n monitoring
+NAME                                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+alertmanager-operated                     ClusterIP   None            <none>        9093/TCP,9094/TCP,9094/UDP   3h11m
+monitoring-grafana                        NodePort    10.96.19.233    <none>        3000:31807/TCP               3h11m
+monitoring-kube-prometheus-alertmanager   ClusterIP   10.96.112.250   <none>        9093/TCP,8080/TCP            3h11m
+monitoring-kube-prometheus-operator       ClusterIP   10.96.84.71     <none>        443/TCP                      3h11m
+monitoring-kube-prometheus-prometheus     ClusterIP   10.96.15.126    <none>        9090/TCP,8080/TCP            3h11m
+monitoring-kube-state-metrics             ClusterIP   10.96.190.152   <none>        8080/TCP                     3h11m
+monitoring-prometheus-node-exporter       ClusterIP   10.96.229.71    <none>        9100/TCP                     3h11m
+prometheus-operated                       ClusterIP   None            <none>        9090/TCP                     3h11m
+
 ```
 
 Example output:
