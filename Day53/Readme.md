@@ -263,6 +263,8 @@ You can now create dashboards in Grafana to monitor CPU, memory, pod status, and
 ---
 ## Real-Time Monitoring Using Grafana Dashboard
 
+The Kubernetes cluster metrics are monitored in **real time** using the **Grafana Dashboard**.
+
 Dashboards
 Alertmanager / Overview
 
