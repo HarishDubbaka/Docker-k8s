@@ -261,3 +261,12 @@ Open in browser: [http://localhost:3100](http://localhost:3100)
 You can now create dashboards in Grafana to monitor CPU, memory, pod status, and logs from Loki, all in one place.
 
 ---
+## Real-Time Monitoring Using Grafana Dashboard
+
+Dashboards
+Alertmanager / Overview
+
+![Image Alt](image_url).
+
+![Image Alt](image_url).
+
