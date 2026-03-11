@@ -183,6 +183,31 @@ kubectl port-forward svc/monitoring-kube-prometheus-prometheus 9090:9090 -n moni
 Open in browser: [http://localhost:9090](http://localhost:9090)
 Query metrics with **PromQL**.
 
+Then navigate to the **Graph** tab and run the PromQL queries.
+
+---
+
+## 🔎 Common PromQL Queries
+
+| Purpose                        | Query                                                                                       | Notes                                        |
+| ------------------------------ | ------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| **CPU usage per node**         | `rate(node_cpu_seconds_total{mode!="idle"}[5m])`                                            | Shows CPU usage excluding idle time.         |
+| **Memory usage**               | `node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes`                               | Displays current memory consumption.         |
+| **Disk usage**                 | `node_filesystem_size_bytes{fstype!="tmpfs"} - node_filesystem_free_bytes{fstype!="tmpfs"}` | Tracks disk space used on nodes.             |
+| **Pod restarts**               | `rate(kube_pod_container_status_restarts_total[5m])`                                        | Helps detect unstable pods or crash loops.   |
+| **HTTP request rate**          | `rate(http_requests_total[5m])`                                                             | Requests per second over the last 5 minutes. |
+| **Error rate (non-2xx)**       | `rate(http_requests_total{status!~"2.."}[5m])`                                              | Filters out successful HTTP responses.       |
+| **Node uptime**                | `node_time_seconds - node_boot_time_seconds`                                                | Shows how long each node has been running.   |
+| **Prometheus scrape duration** | `rate(prometheus_target_interval_length_seconds_sum[5m])`                                   | Helps detect scrape performance problems.    |
+
+## Notes
+
+* These queries are useful for **basic cluster monitoring and troubleshooting**.
+* You can also use the same PromQL queries inside **Grafana dashboards** for visualization.
+* Metrics are typically collected via **node-exporter**, **kube-state-metrics**, and other monitoring components in the Kubernetes cluster.
+
+---
+
 ### Grafana
 
 ```bash
