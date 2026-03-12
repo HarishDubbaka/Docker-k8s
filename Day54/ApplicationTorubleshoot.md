@@ -1,6 +1,6 @@
 In real production environments and in the **Certified Kubernetes Administrator (CKA)**, troubleshooting should start with **understanding the problem clearly before running commands**.
 
-Here is a **structured troubleshooting approach used by experienced Kubernetes admins**.
+Here is a **structured troubleshooting approach used by Kubernetes admins**.
 
 ---
 
@@ -173,7 +173,7 @@ Look for:
 
 Blindly executing commands without understanding the issue can make troubleshooting slower.
 
-When debugging application connectivity or failures in **Kubernetes** (especially in **Certified Kubernetes Administrator (CKA)** tasks) main checks:
+When debugging application connectivity or failures in **Kubernetes**  the main checks:
 
 * Labels
 * Endpoints
@@ -449,4 +449,4 @@ Cluster events
 
 ---
 
-If you'd like, I can also give you a **visual Kubernetes troubleshooting flowchart used by many DevOps engineers during CKA and interviews**.
+Effective Kubernetes troubleshooting means understanding the problem first, then systematically checking pods, services, network, and cluster health.
