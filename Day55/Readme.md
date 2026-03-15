@@ -27,9 +27,9 @@ In that case, SSH into the **control plane node** directly.
 
 ## 2️⃣ Check Control Plane Components
 
-Verify the core components:
+Verify the core components: under /etc/kubernetes/manifests/
 
-*   kube-apiserver
+*   kube-apiserver -- checkthe file coreclty if any spelling mistakes are there
 *   kube-controller-manager
 *   kube-scheduler
 *   etcd
