@@ -1,4 +1,4 @@
-# 🚑 Kubernetes Worker Node Failure Troubleshooting Guide
+# ⚙️ Kubernetes Worker Node Issues – Diagnosis & Fix Guide
 
 Worker nodes are responsible for running **application workloads (Pods)** in a Kubernetes cluster.
 If a worker node fails, pods may stop running, become **NotReady**, or get **rescheduled to other nodes**.
