@@ -326,7 +326,9 @@ is actually a **complete client-server interaction pipeline** involving authenti
 Understanding this flow gives you:
 
 ✅ Better debugging skills
+
 ✅ Strong Kubernetes fundamentals
+
 ✅ Confidence in real-world cluster operations 🚀
 
 ---
