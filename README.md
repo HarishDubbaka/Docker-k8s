@@ -1070,6 +1070,297 @@ I focus on **Docker 🐳, Kubernetes ☸️, automation, and reliable system ope
 
 ---
 
+Got it 👍 — removed all **Overview sections** and kept everything clean:
+
+---
+
+## 📅 Day 49 – Kubernetes Multi-Node Cluster Upgrade
+
+* 🔢 Kubernetes Versioning
+* 🧭 Upgrade Order (Very Important)
+* ⚠️ Pre-Upgrade Checklist
+* 🚫 Draining Nodes Explained
+* 🔄 Worker Node Upgrade Strategies
+* ⚡ All-at-Once Strategy
+* 🔁 Rolling Upgrade (Recommended)
+* 🟢 Blue-Green Upgrade (Safest)
+* 🔍 Find Available Versions
+* ⚙️ Upgrade Notes
+* ✅ Step-by-Step Safe Upgrade Flow
+* 🧠 Key Takeaways
+* 🎯 Final Thought
+* ⏭️ What’s Next
+
+---
+
+## 📅 Day 50 – Kubernetes Cluster Upgrade (Hands-On)
+
+* 📊 Cluster Status Before Upgrade
+
+### ⚙️ Control Plane
+
+* 🔍 Check kubeadm version
+* 📦 Verify repository
+* 🔢 Check available versions
+* ⬆️ Upgrade kubeadm
+* 📋 View upgrade plan
+* 🚀 Upgrade control plane
+* 🖼 Verify images
+* 🚫 Drain node
+* 🔄 Upgrade kubelet & kubectl
+* ✅ Verify upgrade
+* 🔓 Uncordon node
+
+### 🧠 Concepts
+
+* 🔄 Upgrade order (ADM → LET → CTL)
+
+### 👷 Worker Nodes
+
+* 📦 Update repository
+* ⬆️ Upgrade kubeadm
+* ⚙️ Upgrade node config
+* 🚫 Drain node
+* 🔄 Upgrade kubelet & kubectl
+* 🔓 Uncordon node
+
+### ✅ Final
+
+* 🔍 Verify cluster
+* 🔢 Check versions
+* 🎉 Upgrade complete
+
+---
+
+## 📅 Day 51 – ETCD Backup & Restore
+
+* 🧠 What is ETCD?
+* ⚙️ Raft Protocol
+* 💾 Backup Strategy
+
+### 📦 Backup (Snapshot)
+
+* 🔐 Login to control plane
+* 🛠 Install etcdctl
+* ✅ Verify installation
+* 🔍 Gather ETCD details
+* 📁 Create backup directory
+* 💾 Take snapshot
+* ✔ Verify backup
+
+### 🔄 Restore
+
+* ⚠️ Stop API Server & ETCD
+* 📂 Move manifests
+* ♻️ Restore snapshot
+* 🛠 Update ETCD data path
+* 🔁 Restore manifests
+* ✅ Verify cluster
+
+### ✅ Final
+
+* 🔍 Check node status
+* 💚 Verify ETCD health
+* 📌 Summary
+
+---
+
+## 📅 Day 52 – Kubernetes Logging & Monitoring
+
+* 🎯 Importance (Troubleshooting, Performance, Security, Scaling)
+
+### 📊 Monitoring
+
+* 📘 What is monitoring
+* 🔧 Prometheus + Grafana + Alertmanager
+* 🏗 Monitoring architecture
+* 📈 Metrics examples
+
+### 📜 Logging
+
+* 📘 What is logging
+* 📦 Container logs
+* 🖥 Node logs
+* ⚙️ Control plane logs
+
+### 🗂 Centralized Logging
+
+* 🔄 EFK Stack (Fluentd, Elasticsearch, Kibana)
+* 🏗 Logging architecture
+
+### ⚖️ Observability
+
+* 🔭 Monitoring vs Logging
+* 📊 Prometheus + Grafana
+* 📜 Loki + Promtail
+
+### ✅ Summary
+
+---
+
+## 📅 Day 53 – KIND Monitoring Setup
+
+### 🏗 Setup
+
+* 🧱 Create KIND cluster
+* 📁 Create namespace
+* 📦 Install Prometheus & Grafana
+
+### 📊 Verification
+
+* 🔍 Check pods
+* 🔗 Check services
+
+### 🔌 Access
+
+* 🌐 Prometheus (9090)
+* 📊 Grafana (3000)
+* 📜 Loki (3100)
+
+### 🔎 Monitoring
+
+* 🔍 PromQL queries
+* 📈 Metrics (CPU, Memory, Pods, Disk)
+
+### 📊 Grafana
+
+* ➕ Add data sources
+* 📊 View dashboards
+
+### ✅ Final
+
+* ✔ Verify dashboards
+* 📡 Real-time monitoring
+
+---
+
+## 📅 Day 54 – Kubernetes Troubleshooting
+
+### 🔍 Core Troubleshooting Flow
+
+* 🧩 Identify issue
+* 🎯 Find affected component
+* ⏮ Check previous state
+* 🔄 Review recent changes
+* 📜 Check logs & events
+* 🔗 Validate dependencies
+* 💚 Verify cluster health
+
+### 🧪 Service / App Troubleshooting
+
+* 📦 Pod status
+* 🏷 Labels
+* 🔗 Service selector
+* 🎯 Endpoints
+* 🔌 Port mapping
+* 🔐 NetworkPolicy
+* 🌐 DNS (CoreDNS)
+* 🔄 Internal connectivity
+* 📜 Container logs
+* ⚙️ Resource limits
+* 📅 Events
+* 🖥 Node health
+
+### 🧠 Debugging Order
+
+* Pods → Labels → Service → Endpoints → Ports → Network → DNS → Logs → Nodes → Events
+
+### ✅ Key Takeaway
+
+* Understand → Analyze → Execute
+
+---
+
+## 📅 Day 55 – Kubernetes Control Plane Troubleshooting
+
+* 🖥 Check control plane node status
+* ⚙️ Verify control plane components
+* 🔄 Check kubelet service
+* 📂 Validate static pod manifests
+* 🧠 Troubleshoot scheduler issues
+* ⏳ Pending pods causes
+* 💚 Verify ETCD health
+* 📜 Check API server logs
+* 💻 Check system resources
+* 🔐 Check certificates
+* 🔌 Validate required ports
+* 📅 Check cluster events
+* 🔍 Troubleshooting workflow
+* 🧠 Key takeaway
+
+---
+
+## 📅 Day 56 – Kubernetes Worker Node Troubleshooting
+
+* 🖥 Check node status
+* 🌐 Verify CNI / network plugin
+* 🔄 Check kubelet service
+* 📦 Verify container runtime
+* 💻 Check node resources
+* 🔗 Check network connectivity
+* 📅 Check node events
+* 📊 Verify node capacity
+* 📦 Check image / registry issues
+* 🔐 Check certificates
+* 🔁 Restart node (last option)
+* ✅ Quick troubleshooting checklist
+* 🚀 Production tips
+
+---
+
+## 📅 Day 57 – How `kubectl get nodes` Works Internally
+
+* 🔄 High-level flow
+* 🔍 Request lifecycle (step-by-step)
+* 🔐 Authentication & authorization
+* ⚙️ API Server → ETCD flow
+* 📥 Response processing
+* 📄 JSON vs YAML
+* 📊 Output options
+* 🧠 Advanced concepts
+* ✅ Key takeaways
+* 💡 Pro tips
+* 🎯 Conclusion
+
+---
+
+## 📅 Day 58 – Mastering JSONPath in Kubernetes
+
+* ⏱ Real-time example
+* 🔍 JSONPath filtering
+* 📦 Pod-level examples
+* 🖥 Node-level examples
+* 📊 Formatting & sorting
+* 📘 JSONPath syntax
+* ⭐ Useful expressions
+* 🔁 Looping (very important)
+* ⚙️ Advanced kubectl commands
+* 💡 Pro tips
+* ⚠️ Common mistakes
+* ✅ Key takeaway
+* 🎯 Conclusion
+
+---
+
+## 📅 Day 59 – Highly Available Kubernetes Cluster (kubeadm + HAProxy)
+
+* 🏗 Architecture
+* 🌐 Networking setup (VNet & NSG)
+* 🖥 VM setup
+* ⚖️ HAProxy load balancer setup
+* 🚀 Initialize control plane
+* 🌐 Install CNI (Calico)
+* ➕ Add control plane nodes
+* 👷 Add worker nodes
+* 🔍 Verify HAProxy health
+* 🧪 Failure testing (HA validation)
+* 📊 Final cluster state
+* 🎯 Conclusion
+* 🧠 Key takeaways
+* 📌 Summary
+
+---
+
 Happy Learning ☸️🚀
 
 
