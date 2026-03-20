@@ -1,4 +1,4 @@
-# 🚀 Day 57 – How `kubectl get nodes` Works Internally
+# How `kubectl get nodes` Works Internally
 
 ## 📌 Overview
 
